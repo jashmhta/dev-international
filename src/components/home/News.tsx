@@ -14,7 +14,7 @@ const ctas = [
     tag: "Company",
     title: "Leadership",
     excerpt:
-      "Meet Devesh Metha and the team behind consistent quality, honest pricing, and on-time dispatch.",
+      "Meet Devesh Mehta and the team behind consistent quality, honest pricing, and on-time dispatch.",
   },
   {
     href: "/sustainability",

@@ -23,9 +23,9 @@ export const brand = {
   },
   warehouse: "Well-equipped godown at Bhiwandi (central location)",
   founder: {
-    name: "Devesh Metha",
+    name: "Devesh Mehta",
     role: "Founder & CEO",
-    bio: "Devesh Metha, Founder and CEO of Dev International, has been in the chemical field for decades. His experience and devotion have led the company to prosper.",
+    bio: "Devesh Mehta, Founder and CEO of Dev International, has been in the chemical field for decades. His experience and devotion have led the company to prosper.",
   },
   established: "1995",
 } as const;
