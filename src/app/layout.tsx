@@ -22,7 +22,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(brand.url),
+  metadataBase: new URL(process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : brand.url),
   title: {
     default: `${brand.name} | Specialty Chemicals · Oleo Derivatives · Fatty Alcohol`,
     template: `%s | ${brand.name}`,
@@ -49,13 +49,13 @@ export const metadata: Metadata = {
     siteName: brand.name,
     type: "website",
     locale: "en_IN",
-    images: [{ url: "https://www.devinternational.in/og.png", width: 362, height: 70, alt: brand.name }],
+    images: [{ url: "/og.png", width: 362, height: 70, alt: brand.name }],
   },
   twitter: {
     card: "summary",
     title: brand.name,
     description: brand.description,
-    images: ["https://www.devinternational.in/og.png"],
+    images: ["/og.png"],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   alternates: { canonical: "/" },
