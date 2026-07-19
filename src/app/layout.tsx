@@ -7,6 +7,7 @@ import { Preloader } from "@/components/dynamics/Preloader";
 import { SmoothScroll } from "@/components/dynamics/SmoothScroll";
 import { OrganizationSchema, WebsiteSchema } from "@/components/Schema";
 import { brand } from "@/lib/brand";
+import { MobileCTA } from "@/components/MobileCTA";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -76,6 +77,7 @@ export default function RootLayout({
           <Header />
           <main>{children}</main>
           <Footer />
+          <MobileCTA />
         </SmoothScroll>
       </body>
     </html>
