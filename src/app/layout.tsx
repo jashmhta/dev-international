@@ -45,14 +45,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: brand.name,
     description: brand.description,
-    url: brand.url,
+    url: process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : brand.url,
     siteName: brand.name,
     type: "website",
     locale: "en_IN",
-    images: [{ url: "/og.png", width: 362, height: 70, alt: brand.name }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: brand.name }],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: brand.name,
     description: brand.description,
     images: ["/og.png"],
