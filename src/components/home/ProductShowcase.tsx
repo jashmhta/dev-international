@@ -8,7 +8,7 @@ import { Img } from "../ui/Img";
 
 export function ProductShowcase() {
   return (
-    <section className="section-dark">
+    <section className="section-dark" id="catalogue">
       <div className="site-container py-20 md:py-28">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
@@ -26,54 +26,63 @@ export function ProductShowcase() {
 
       <HorizontalScroll>
         {products.map((p, i) => (
-          <article
+          <Link
             key={p.slug}
-            className="dev-card relative flex h-[60vh] w-[80vw] shrink-0 flex-col justify-between overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.03] p-7 sm:w-[60vw] md:w-[42vw] md:p-9 lg:h-[65vh] lg:w-[34vw] xl:w-[28vw]"
+            href={p.href}
+            aria-label={`Explore ${p.title}`}
+            className="catalogue-card group relative flex h-[62vh] w-[82vw] shrink-0 snap-center flex-col justify-end overflow-hidden rounded-[24px] border border-white/10 sm:w-[58vw] md:w-[42vw] lg:h-[68vh] lg:w-[33vw] xl:w-[27vw]"
           >
-            <div className="relative z-10 flex items-start justify-between">
-              <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-alethia-lime/70">
+            {/* Full-bleed product image */}
+            <Img
+              src={p.image}
+              alt={p.title}
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
+            />
+            {/* Gradient scrim for legibility */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0a1608] via-[#0a1608]/55 to-transparent" aria-hidden="true" />
+            <div className="absolute inset-0 bg-[#0f1f10]/15 transition-opacity duration-500 group-hover:opacity-0" aria-hidden="true" />
+
+            {/* Top row: index + arrow */}
+            <div className="absolute inset-x-0 top-0 z-10 flex items-start justify-between p-5 md:p-6">
+              <span className="rounded-full border border-white/20 bg-black/30 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-white/90 backdrop-blur-md">
                 {String(i + 1).padStart(2, "0")} / {products.length}
               </span>
-              <Link
-                href={p.href}
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-alethia-lime text-alethia-dark transition hover:scale-105"
-                aria-label={`Explore ${p.title}`}
-              >
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-alethia-lime text-alethia-dark shadow-lg transition-transform duration-300 group-hover:rotate-45 group-hover:scale-110">
                 <ArrowUpRight className="h-4 w-4" />
-              </Link>
+              </span>
             </div>
-            <div className="relative z-10">
-              <p className="font-mono text-[10px] uppercase tracking-[0.1em] text-white/60 sm:text-[11px]">
+
+            {/* Bottom content */}
+            <div className="relative z-10 p-5 md:p-7">
+              <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-alethia-lime sm:text-[11px]">
                 {p.short}
               </p>
-              <h3 className="mt-2 text-[1.4rem] font-medium leading-tight tracking-[-0.03em] text-white md:text-[1.75rem]">
+              <h3 className="mt-2 text-[1.5rem] font-medium leading-tight tracking-[-0.03em] text-white md:text-[1.85rem]">
                 {p.title}
               </h3>
-              <p className="mt-3 line-clamp-2 max-w-md text-[13px] leading-relaxed text-white/55 md:text-[14px]">
+              <p className="mt-2.5 line-clamp-2 max-w-md text-[13px] leading-relaxed text-white/75 md:text-[14px]">
                 {p.blurb}
               </p>
               <div className="mt-4 flex flex-wrap gap-1.5">
-                {p.items.slice(0, 3).map((item) => (
+                {p.items.slice(0, 2).map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-white/25 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.08em] text-white/70"
+                    className="rounded-full border border-white/20 bg-white/10 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.08em] text-white/90 backdrop-blur-sm"
                   >
                     {item}
                   </span>
                 ))}
-                {p.items.length > 3 && (
-                  <span className="rounded-full border border-white/25 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.08em] text-white/70">
-                    +{p.items.length - 3}
-                  </span>
-                )}
+                <span className="rounded-full bg-alethia-lime/90 px-2.5 py-1 font-mono text-[9px] font-medium uppercase tracking-[0.08em] text-alethia-dark">
+                  {p.items.length} grades
+                </span>
+              </div>
+              {/* Explore hint that reveals on hover (desktop) */}
+              <div className="mt-4 hidden items-center gap-2 font-mono text-[10px] uppercase tracking-[0.14em] text-white/0 transition-colors duration-300 group-hover:text-alethia-lime md:flex">
+                Explore family
+                <span className="block h-px w-8 bg-alethia-lime/0 transition-colors duration-300 group-hover:bg-alethia-lime/70" />
               </div>
             </div>
-            <Img
-              src={p.image}
-              alt={p.title}
-              className="pointer-events-none absolute -right-4 bottom-0 h-[40%] w-auto max-w-[50%] object-contain opacity-15 mix-blend-luminosity md:h-[50%] md:opacity-20"
-            />
-          </article>
+          </Link>
         ))}
       </HorizontalScroll>
     </section>

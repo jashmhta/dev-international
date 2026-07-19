@@ -66,18 +66,27 @@ export function HorizontalScroll({ children, className = "", minWidth = 1024 }: 
             overflow-x: auto;
             overflow-y: hidden;
             -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
           }
           .dev-hscroll::-webkit-scrollbar { display: none; }
           .dev-hscroll-track {
             height: auto;
-            min-height: 60vh;
-            gap: 1rem;
-            padding: 0 var(--page-pad) 1.5rem;
+            min-height: 62vh;
+            gap: 0.875rem;
+            padding: 0 var(--page-pad) 1.75rem;
+          }
+          .dev-hscroll-track > * {
+            scroll-snap-align: center;
+            scroll-snap-stop: normal;
           }
         }
         @media (min-width: ${minWidth}px) {
           .dev-hscroll-track {
             height: 100dvh;
+            gap: 1.25rem;
+            padding-left: var(--page-pad);
+            padding-right: var(--page-pad);
           }
         }
       `}</style>
