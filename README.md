@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Alethia — Next.js replica
 
-## Getting Started
+A high-fidelity recreation of [alethia.earth](https://www.alethia.earth/) built with Next.js 15, Tailwind CSS, and TypeScript.
 
-First, run the development server:
+## Stack
+
+- **Next.js 15** (App Router)
+- **React 19**
+- **Tailwind CSS 3**
+- **Lenis** — smooth scroll (matches live `html.lenis`)
+- **GSAP + ScrollTrigger** — pinned narrative, scrub, reveals
+- **Framer Motion** — preloader exit, magnetic CTAs
+- **Lottie** — brand preloader (scraped JSON)
+- **211-frame island sequence** — scroll-scrubbed canvas player from `r2-assets.alethia.earth`
+- **WebM loops** — scan / loop1 / loop2 / clouds from production CDN
+- **Geist / Geist Mono** + captured WebGL rock stills
+
+## Dynamics (1:1 intent)
+
+| Live Framer behavior | Replica |
+|---|---|
+| Preloader | Lottie + fade reveal |
+| Lenis smooth scroll | `lenis` + GSAP ticker bridge |
+| Roca atras/medio/front | 3-layer rocks, mouse parallax + idle float + scroll zoom-out |
+| Scan video pin | Sticky narrative stage, `scan.webm` |
+| Floating island sequence | Canvas scrub of 211 webp frames |
+| Accordion + carbon UI | Animated expand + glass cards |
+| Loop video section | Dual `loop1` / `loop2` webms |
+| Section reveals | GSAP fade/slide on enter |
+| CTA magnetism | Cursor-attract buttons |
+
+## Pages
+
+| Route | Source |
+|-------|--------|
+| `/` | Homepage |
+| `/our-company` | Company |
+| `/contact` | Contact |
+| `/solutions/nature-based` | Nature-based solutions |
+| `/solutions/supply-chain` | Supply chain / insetting |
+| `/our-tech/amrv` | aMRV technology |
+| `/our-tech/blockchain` | Blockchain |
+| `/resources/news-and-media` | News |
+| `/resources/case-studies` | Case studies |
+| `/resources/research-and-insights` | Research |
+| `/privacy-policy` | Privacy |
+| `/terms-of-use` | Terms |
+
+## Develop
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Design tokens (from live site)
 
-To learn more about Next.js, take a look at the following resources:
+- **Background dark:** `#0F1F10`
+- **Lime accent:** `#C6F19D`
+- **Cream light:** `#F5F4F2`
+- **Display type:** Geist Medium, ~72px hero, tight tracking (~-0.05em)
+- **UI labels / buttons:** Geist Mono, uppercase
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Scraped with `agent-browser` (screenshots + computed styles) from the production Framer site.

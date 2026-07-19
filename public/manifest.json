@@ -1,0 +1,17 @@
+{
+  "name": "Dev International — Specialty Chemicals",
+  "short_name": "Dev International",
+  "description": "One stop for quality specialty chemicals at competitive prices and timely service since 1995.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f1f10",
+  "theme_color": "#0f1f10",
+  "icons": [
+    {
+      "src": "/images/brand/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
