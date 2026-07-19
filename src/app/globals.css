@@ -47,7 +47,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   @media (max-width: 767px) {
-    padding-bottom: 72px;
+    padding-bottom: 60px;
   }
 }
 

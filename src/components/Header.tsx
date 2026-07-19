@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { nav } from "@/lib/nav";
 import { brand } from "@/lib/brand";
 import { ChevronDown, ArrowRight } from "./ui/Icons";
@@ -24,12 +24,37 @@ export function Header() {
   const [open, setOpen] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [mobileHidden, setMobileHidden] = useState(false);
+  const lastScroll = useRef(0);
+  const mobileTimeout = useRef<ReturnType<typeof window.setTimeout>>(0 as unknown as ReturnType<typeof window.setTimeout>);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 8);
+      const y = window.scrollY;
+      const dy = y - lastScroll.current;
+      lastScroll.current = y;
+
+      if (y < 60) {
+        setMobileHidden(false);
+        return;
+      }
+      if (dy > 3) {
+        setMobileHidden(true);
+        clearTimeout(mobileTimeout.current);
+      } else if (dy < -2) {
+        setMobileHidden(false);
+      } else {
+        clearTimeout(mobileTimeout.current);
+        mobileTimeout.current = setTimeout(() => setMobileHidden(false), 120);
+      }
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      clearTimeout(mobileTimeout.current);
+    };
   }, []);
 
   // Lock body scroll when the mobile sheet is open
@@ -126,7 +151,10 @@ export function Header() {
       </header>
 
       {/* ===== Mobile liquid glass pill nav (below xl) ===== */}
-      <header className="fixed inset-x-0 top-0 z-50 xl:hidden">
+      <header
+        className="fixed inset-x-0 top-0 z-50 xl:hidden transition-transform duration-300 ease-out"
+        style={{ transform: mobileHidden && !mobileOpen ? "translateY(-110%)" : "translateY(0)" }}
+      >
         <div className="flex items-center justify-between gap-3 px-4 pt-4">
           {/* Left pill: brand */}
           <Link
