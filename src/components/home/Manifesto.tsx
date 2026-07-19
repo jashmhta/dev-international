@@ -12,7 +12,7 @@ export function Manifesto() {
         </Reveal>
         <SplitText
           as="h2"
-          text={`Chemicals are the molecules between your formulation and your customer's trust. We supply that trust — consistently, competitively, on time, from Mumbai to all of India.`}
+          text={`Chemicals are the molecules between your formulation and your customer's trust. We supply that trust, consistently, competitively, on time, from Mumbai to all of India.`}
           className="mt-8 max-w-5xl text-[1.35rem] font-medium leading-[1.3] tracking-[-0.03em] text-white/30 md:mt-10 md:text-[2rem] md:leading-[1.25] lg:text-[2.4rem] lg:leading-[1.2]"
         />
         <Reveal delay={0.1}>

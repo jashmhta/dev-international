@@ -13,7 +13,7 @@ type Props = {
   className?: string;
 };
 
-/** Scroll-triggered number counter — animates from 0 to `end` on enter. */
+/** Scroll-triggered number counter - animates from 0 to `end` on enter. */
 export function Counter({ end, suffix = "", duration = 2, className = "" }: Props) {
   const ref = useRef<HTMLSpanElement>(null);
 

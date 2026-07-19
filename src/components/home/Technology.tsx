@@ -81,7 +81,7 @@ export function Technology() {
         <Reveal delay={0.08} className="order-1 lg:order-2">
           <span className="label-pill">Why Dev International</span>
           <h3 className="display-md mt-6 text-white">
-            One stop for a wide range of quality chemicals — backed by decades
+            One stop for a wide range of quality chemicals, backed by decades
             of field experience and a strong customer base.
           </h3>
           <div className="mt-8">

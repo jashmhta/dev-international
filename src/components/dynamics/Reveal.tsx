@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-/** Fade/slide up on enter — used across static sections */
+/** Fade/slide up on enter - used across static sections */
 export function Reveal({
   children,
   className = "",

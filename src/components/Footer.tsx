@@ -16,7 +16,7 @@ export function FooterCta() {
           Quality chemicals. Competitive pricing. Dispatch you can plan around.
         </h2>
         <p className="body-lg mt-6 max-w-xl text-white/75">
-          One stop for specialty chemicals — from oleo derivatives
+          One stop for specialty chemicals, from oleo derivatives
           <br className="hidden sm:block" /> to surfactants, solvents, and industrial grades.
         </p>
         <div className="mt-10">
@@ -130,7 +130,7 @@ export function Footer() {
 
           <div className="mt-16 flex flex-col gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
             <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-white/55">
-              © {new Date().getFullYear()} {brand.name} — All rights reserved
+              © {new Date().getFullYear()} {brand.name}, All rights reserved
             </p>
             <a
               href="#top"

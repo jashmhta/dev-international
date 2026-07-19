@@ -12,7 +12,7 @@ type Props = {
   amount?: number;
 };
 
-/** Parallax — moves element vertically at a fraction of scroll speed. */
+/** Parallax - moves element vertically at a fraction of scroll speed. */
 export function Parallax({ children, className = "", amount = 0.25 }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 

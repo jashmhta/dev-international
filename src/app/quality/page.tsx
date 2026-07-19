@@ -7,7 +7,7 @@ import QAReveal from "./QAReveal";
 
 export const metadata: Metadata = {
   title: "Quality & Compliance",
-  description: `Quality assurance at ${brand.name} — COA/TDS documentation, lot checks, and the compliance standards we hold.`,
+  description: `Quality assurance at ${brand.name}, COA/TDS documentation, lot checks, and the compliance standards we hold.`,
 };
 
 const qaSteps = [
@@ -39,7 +39,7 @@ export default function QualityPage() {
       <PageHero
         eyebrow="Quality & Compliance"
         title="Every lot. Documented. Checked. Repeatable."
-        subtitle="Quality is not a marketing line — it is the documentation and checks that let you plan production around our dispatch."
+        subtitle="Quality is not a marketing line. It is the documentation and checks that let you plan production around our dispatch."
         showScroll
       />
 
@@ -66,7 +66,7 @@ export default function QualityPage() {
             </h2>
             <p className="body-lg mx-auto mt-6 max-w-xl text-white/60">
               Availability of a specific certification depends on product line
-              and grade — confirm with our team for your requirement.
+              and grade, confirm with our team for your requirement.
             </p>
           </div>
           <div className="mx-auto mt-14 grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-3">

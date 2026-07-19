@@ -95,7 +95,7 @@ export function AboutSection() {
             >
               <Img
                 src="/images/about/founder.webp"
-                alt={`${brand.founder.name} — ${brand.founder.role} of ${brand.name}`}
+                alt={`${brand.founder.name}, ${brand.founder.role} of ${brand.name}`}
                 className="h-full w-full object-cover"
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-6 pt-16">
@@ -137,7 +137,7 @@ export function AboutSection() {
             >
               {brand.founder.name}, Founder &amp; CEO of {brand.name}, has been
               in the chemical field for decades. His experience and devotion
-              have led the company to prosper — building a strong, satisfied
+              have led the company to prosper, building a strong, satisfied
               customer base through timely service, quality products, and
               correct, competitive pricing.
             </p>
@@ -147,7 +147,7 @@ export function AboutSection() {
             >
               From our Mumbai office and well-equipped Bhiwandi warehouse, we
               supply bio-based and specialty chemicals to multinational
-              corporates, MSMEs, and trade houses — one roof for the raw
+              corporates, MSMEs, and trade houses, one roof for the raw
               material needs of over 30 industries.
             </p>
 

@@ -18,7 +18,7 @@ export function ProductShowcase() {
             </h2>
           </div>
           <p className="max-w-xs text-sm text-white/70">
-            From oleo derivatives to surfactants — a portfolio built to cover
+            From oleo derivatives to surfactants, a portfolio built to cover
             every link in your formulation chain.
           </p>
         </div>

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { brand } from "@/lib/brand";
 
-/** Lightweight preloader — no lottie SSR issues */
+/** Lightweight preloader - no lottie SSR issues */
 export function Preloader() {
   const [visible, setVisible] = useState(false);
 

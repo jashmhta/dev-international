@@ -7,7 +7,7 @@ const stories = [
   {
     href: "/about",
     tag: "Company",
-    title: `M/s ${brand.name} — Trusted Since ${brand.established}`,
+    title: `M/s ${brand.name} | Trusted Since ${brand.established}`,
     meta: "About the company",
     author: brand.founder.name,
     role: brand.founder.role,
@@ -16,7 +16,7 @@ const stories = [
   {
     href: "/applications",
     tag: "Industries",
-    title: "From Cosmetics to Construction — Chemicals That Perform",
+    title: "From Cosmetics to Construction | Chemicals That Perform",
     meta: "Application segments",
     author: brand.name,
     role: "Specialty Chemicals",

@@ -18,7 +18,7 @@ export default function AboutReveal() {
           <p className="mt-5 text-[1.25rem] font-medium leading-snug tracking-[-0.02em] text-white">
             To use our natural societal abilities as a team leader to
             encourage and collaborate with other participants and
-            organizations — sharing best business practices and innovative
+            organizations, sharing best business practices and innovative
             approaches to value-based enlightenment for societal well-being.
           </p>
         </Reveal>

@@ -22,7 +22,7 @@ export function Testimonials() {
             </h2>
             <p className="body-lg mt-4 max-w-md text-alethia-dark/65 md:mt-6">
               From cosmetic manufacturers to home-care brands and specialty
-              units — partners keep coming back for consistency they can build a
+              units, partners keep coming back for consistency they can build a
               schedule on.
             </p>
           </Reveal>

@@ -10,7 +10,7 @@ import { brand } from "@/lib/brand";
 gsap.registerPlugin(ScrollTrigger);
 
 /**
- * Hero — cinematic eco-chemistry background image.
+ * Hero - cinematic eco-chemistry background image.
  * The 3D rock/island lives in the next section (ScrollNarrative).
  */
 export function Hero() {
@@ -156,7 +156,7 @@ export function Hero() {
               className="mt-6 max-w-[min(100%,440px)] text-[15px] leading-[1.5] tracking-[-0.01em] text-[#f5f4f2]/80 sm:text-[16px] md:mt-8"
             >
               Bio-based oleo derivatives, fatty alcohols, esters, glycerin,
-              waxes, and surfactants — plant-derived, quality-checked, and
+              waxes, and surfactants, plant-derived, quality-checked, and
               dispatched from Mumbai since {brand.established}.
             </p>
             <div

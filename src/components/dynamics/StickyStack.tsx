@@ -12,7 +12,7 @@ type Props = {
 };
 
 /**
- * Sticky card stack — each card pins at viewport top; as the next card
+ * Sticky card stack - each card pins at viewport top; as the next card
  * scrolls in, the previous scales down to 0.92 and dims to 0.55 opacity.
  */
 export function StickyStack({ cards, className = "" }: Props) {

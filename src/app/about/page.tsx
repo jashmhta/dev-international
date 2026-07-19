@@ -10,8 +10,8 @@ import AboutReveal from "./AboutReveal";
 const YEARS = new Date().getFullYear() - Number(brand.established);
 
 export const metadata: Metadata = {
-  title: "About Us — Trusted Specialty Chemicals Supplier Since 1995",
-  description: `M/s ${brand.name}, established ${brand.established} in Mumbai by ${brand.founder.name} — ${YEARS}+ years supplying quality specialty chemicals to MNCs, MSMEs, and trade houses across India.`,
+  title: "About Us | Trusted Specialty Chemicals Supplier Since 1995",
+  description: `M/s ${brand.name}, established ${brand.established} in Mumbai by ${brand.founder.name}, ${YEARS}+ years supplying quality specialty chemicals to MNCs, MSMEs, and trade houses across India.`,
   alternates: { canonical: "/about" },
 };
 
@@ -19,12 +19,12 @@ const milestones = [
   {
     year: "1995",
     title: "Founded in Mumbai",
-    body: `${brand.founder.name} establishes M/s ${brand.name} — built on quality products, correct pricing, and timely service.`,
+    body: `${brand.founder.name} establishes M/s ${brand.name}, built on quality products, correct pricing, and timely service.`,
   },
   {
     year: "2000s",
     title: "Portfolio expansion",
-    body: "The product basket grows across oleo derivatives, fatty acids, fatty alcohols, glycerin, waxes, and surfactants — one roof for all industries.",
+    body: "The product basket grows across oleo derivatives, fatty acids, fatty alcohols, glycerin, waxes, and surfactants, one roof for all industries.",
   },
   {
     year: "2010s",
@@ -50,7 +50,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About Company"
         title={brand.name}
-        subtitle={`Established in ${brand.established}. A trusted name for quality chemicals — ${YEARS}+ years of timely service, quality products, and correct competitive pricing.`}
+        subtitle={`Established in ${brand.established}. A trusted name for quality chemicals, with ${YEARS}+ years of timely service, quality products, and correct competitive pricing.`}
         bgImage="/images/brand/banner3.webp"
         showScroll
       />
@@ -74,7 +74,7 @@ export default function AboutPage() {
                 We offer a wide range of chemicals to cater to the raw material
                 requirements of all industries under one roof. Our customers
                 include large multinational corporates, medium to small scale
-                units, and trade houses — served by well-trained professional
+                units, and trade houses, served by well-trained professional
                 staff managing the back office and a well-equipped godown at
                 central location, Bhiwandi.
               </p>
@@ -83,7 +83,7 @@ export default function AboutPage() {
               <div className="mt-8 overflow-hidden rounded-[24px] border border-alethia-dark/10">
                 <Img
                   src="/images/about/about.jpg"
-                  alt={`${brand.name} — chemical supply operations`}
+                  alt={`${brand.name}, chemical supply operations`}
                   className="h-full w-full object-cover"
                 />
               </div>
@@ -101,13 +101,13 @@ export default function AboutPage() {
               <div className="mt-6 overflow-hidden rounded-[20px]">
                 <Img
                   src="/images/about/founder.webp"
-                  alt={`${brand.founder.name} — Founder & CEO of ${brand.name}`}
+                  alt={`${brand.founder.name}, Founder & CEO of ${brand.name}`}
                   className="aspect-[3/4] h-auto w-full object-cover"
                 />
               </div>
               <p className="mt-6 leading-relaxed text-alethia-dark/70">
                 {brand.founder.bio} Providing market-leading products and
-                solutions for important segments of Indian industry — building
+                solutions for important segments of Indian industry, building
                 &amp; construction, plastics &amp; packaging, water &amp;
                 health, food &amp; pharma, automotive, electronics, and
                 renewable energies.

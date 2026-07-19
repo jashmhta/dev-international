@@ -37,7 +37,7 @@ export function Trust() {
           <Reveal delay={0.12}>
             <p className="body-lg mx-auto mt-6 max-w-2xl text-alethia-dark/70">
               A strong satisfied customer base built on timely service, quality
-              products, and competitive pricing — under one roof.
+              products, and competitive pricing, under one roof.
             </p>
           </Reveal>
         </div>

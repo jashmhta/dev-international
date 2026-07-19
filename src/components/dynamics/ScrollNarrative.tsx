@@ -10,12 +10,12 @@ const features = [
   {
     id: "01",
     title: "Bio-Based Chemical Portfolio",
-    body: "Plant-derived oleo derivatives, fatty acids & alcohols, esters, glycerin, waxes, phosphorous compounds, solvent esters, and surfactants — sourced from renewable feedstocks wherever possible.",
+    body: "Plant-derived oleo derivatives, fatty acids & alcohols, esters, glycerin, waxes, phosphorous compounds, solvent esters, and surfactants, sourced from renewable feedstocks wherever possible.",
   },
   {
     id: "02",
     title: "Decades of Field Experience",
-    body: `${brand.founder.name}, Founder & CEO, has led ${brand.name} with devotion in the chemical field for decades — building a strong, satisfied customer base.`,
+    body: `${brand.founder.name}, Founder & CEO, has led ${brand.name} with devotion in the chemical field for decades, building a strong, satisfied customer base.`,
   },
   {
     id: "03",
@@ -30,12 +30,12 @@ const features = [
   {
     id: "05",
     title: "Competitive & Consistent",
-    body: "Quality chemicals at correct competitive prices — for multinationals, medium & small units, and trade houses.",
+    body: "Quality chemicals at correct competitive prices, for multinationals, medium & small units, and trade houses.",
   },
   {
     id: "06",
     title: "Sustainable by Sourcing",
-    body: "RSPO Mass Balance certified grades, bio-based feedstocks from palm, coconut, and soya, and full COA/TDS traceability on every lot — so your green claims are verifiable.",
+    body: "RSPO Mass Balance certified grades, bio-based feedstocks from palm, coconut, and soya, and full COA/TDS traceability on every lot, so your green claims are verifiable.",
   },
 ];
 
@@ -64,7 +64,7 @@ export function ScrollNarrative() {
           </p>
           <p className="mt-8 max-w-[560px] text-[1.35rem] font-medium leading-[1.25] tracking-[-0.03em] text-white/90 md:mt-12 md:text-[1.75rem]">
             {brand.name} translates complex chemical supply needs into reliable,
-            quality-assured raw materials — so you can focus on production, not
+            quality-assured raw materials, so you can focus on production, not
             procurement risk.
           </p>
         </div>
@@ -89,7 +89,7 @@ export function ScrollNarrative() {
           </div>
           <div className="site-container relative z-10 flex h-full flex-col justify-end pb-16">
             <p className="max-w-md text-[1.1rem] font-medium leading-snug tracking-[-0.02em] text-white/90 md:text-[1.35rem]">
-            Eco-friendly chemistry, rooted in nature — bio-based feedstocks,
+            Eco-friendly chemistry, rooted in nature, bio-based feedstocks,
             renewable plant oils, and traceable green supply chains, delivered
             with industrial discipline.
             </p>

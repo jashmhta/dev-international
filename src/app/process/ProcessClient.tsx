@@ -9,7 +9,7 @@ export default function ProcessClient() {
       <div className="grid grid-cols-2 gap-4">
         <div className="rounded-[20px] border border-white/10 bg-white/[0.03] p-6">
           <p className="display-lg text-white">
-            <Counter end={1} suffix="–3" />
+            <Counter end={1} suffix="-3" />
           </p>
           <p className="mt-2 text-sm text-white/50">Days dispatch, stocked</p>
         </div>

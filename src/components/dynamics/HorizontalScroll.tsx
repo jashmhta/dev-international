@@ -18,7 +18,7 @@ type Props = {
  * section and pans horizontally on vertical scroll. On mobile, the same
  * element becomes a native touch-scroll container via CSS.
  *
- * Same DOM is always rendered to avoid hydration mismatch — responsive
+ * Same DOM is always rendered to avoid hydration mismatch - responsive
  * behavior is handled by CSS + the GSAP effect (which checks matchMedia).
  */
 export function HorizontalScroll({ children, className = "", minWidth = 1024 }: Props) {

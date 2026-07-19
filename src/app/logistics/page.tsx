@@ -7,13 +7,13 @@ import LogisticsReveal from "./LogisticsReveal";
 
 export const metadata: Metadata = {
   title: "Logistics & Supply",
-  description: `Warehousing, dispatch, and supply capability at ${brand.name} — Bhiwandi warehouse, India-wide delivery.`,
+  description: `Warehousing, dispatch, and supply capability at ${brand.name}, Bhiwandi warehouse, India-wide delivery.`,
 };
 
 const capabilities = [
   {
     title: "Central Warehouse",
-    body: `Well-equipped godown at Bhiwandi — a central location that keeps stocked items ready for fast dispatch across India.`,
+    body: `Well-equipped godown at Bhiwandi, a central location that keeps stocked items ready for fast dispatch across India.`,
   },
   {
     title: "Multi-Grade Inventory",
@@ -25,7 +25,7 @@ const capabilities = [
   },
   {
     title: "India-Wide Delivery",
-    body: "We coordinate transport to customers across India — from multinational corporates to medium and small-scale units and trade houses.",
+    body: "We coordinate transport to customers across India, from multinational corporates to medium and small-scale units and trade houses.",
   },
 ];
 
@@ -35,7 +35,7 @@ export default function LogisticsPage() {
       <PageHero
         eyebrow="Logistics"
         title="Stocked, checked, and dispatched from Bhiwandi."
-        subtitle="A central warehouse and trained team mean your order moves from enquiry to dispatch in days, not weeks — with documentation on every lot."
+        subtitle="A central warehouse and trained team mean your order moves from enquiry to dispatch in days, not weeks, with documentation on every lot."
         showScroll
       />
 
@@ -70,7 +70,7 @@ export default function LogisticsPage() {
               Plan your production around our dispatch.
             </h2>
             <p className="body-lg mt-6 max-w-md text-white/60">
-              Stocked items leave Bhiwandi within 1–3 working days. Make-to-order
+              Stocked items leave Bhiwandi within 1-3 working days. Make-to-order
               and tanker loads follow the manufacturer lead time, which we
               confirm in writing at quotation.
             </p>
@@ -91,7 +91,7 @@ export default function LogisticsPage() {
               {brand.warehouse}
             </h2>
             <p className="mt-4 max-w-xl text-white/70">
-              Our Bhiwandi godown is the operational heart of {brand.name} —
+              Our Bhiwandi godown is the operational heart of {brand.name} -
               central, equipped, and staffed to keep your supply moving.
             </p>
           </div>

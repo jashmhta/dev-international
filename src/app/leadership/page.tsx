@@ -7,7 +7,7 @@ import LeadershipReveal from "./LeadershipReveal";
 
 export const metadata: Metadata = {
   title: "Leadership",
-  description: `The team behind ${brand.name} — founder, technical sales, and warehouse operations.`,
+  description: `The team behind ${brand.name}, founder, technical sales, and warehouse operations.`,
 };
 
 export default function LeadershipPage() {
@@ -16,7 +16,7 @@ export default function LeadershipPage() {
       <PageHero
         eyebrow="Leadership"
         title="People who keep the supply reliable."
-        subtitle="Three decades of chemical supply is built on people — from the founder to the warehouse floor — who treat every order as a promise."
+        subtitle="Three decades of chemical supply is built on people, from the founder to the warehouse floor, who treat every order as a promise."
         showScroll
       />
 

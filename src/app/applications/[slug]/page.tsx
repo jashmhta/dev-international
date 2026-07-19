@@ -24,11 +24,11 @@ export async function generateMetadata({
   const app = getApplication(slug);
   if (!app) return {};
   return {
-    title: `${app.title} — Chemicals & Raw Materials`,
-    description: `${app.description} ${brand.name}, Mumbai — trusted specialty chemicals supplier since ${brand.established}.`,
+    title: `${app.title} | Chemicals & Raw Materials`,
+    description: `${app.description} ${brand.name}, Mumbai, trusted specialty chemicals supplier since ${brand.established}.`,
     alternates: { canonical: `/applications/${app.slug}` },
     openGraph: {
-      title: `${app.title} — ${brand.name}`,
+      title: `${app.title} | ${brand.name}`,
       description: app.description,
       images: [{ url: app.image }],
     },
@@ -79,7 +79,7 @@ export default async function ApplicationDetailPage({
             <div className="relative aspect-[4/3] overflow-hidden rounded-[20px] md:rounded-[28px]">
               <Img
                 src={app.image}
-                alt={`${app.title} — chemicals supplied by ${brand.name}`}
+                alt={`${app.title}, chemicals supplied by ${brand.name}`}
                 className="absolute inset-0 h-full w-full object-cover"
               />
             </div>

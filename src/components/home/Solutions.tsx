@@ -21,7 +21,7 @@ export function Solutions() {
         <Reveal delay={0.1}>
           <p className="body-lg mt-4 max-w-2xl text-alethia-dark/65">
             From oleo derivatives and fatty alcohols to surfactants, waxes, and
-            industrial solvents — sourced and supplied for cosmetics, pharma,
+            industrial solvents, sourced and supplied for cosmetics, pharma,
             coatings, and manufacturing.
           </p>
         </Reveal>

@@ -7,7 +7,7 @@ import { products, brand } from "@/lib/brand";
 
 export const metadata: Metadata = {
   title: "Products",
-  description: `Explore ${brand.name} specialty chemicals — oleo derivatives, fatty acids, alcohols, esters, glycerin, waxes, phosphorous compounds, solvents, and surfactants.`,
+  description: `Explore ${brand.name} specialty chemicals, oleo derivatives, fatty acids, alcohols, esters, glycerin, waxes, phosphorous compounds, solvents, and surfactants.`,
 };
 
 export default function ProductsPage() {

@@ -4,7 +4,7 @@ import { brand } from "@/lib/brand";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: `Contact ${brand.name} — ${brand.address.full}. Phone ${brand.phones[0]}. Email ${brand.email.sales}.`,
+  description: `Contact ${brand.name}, ${brand.address.full}. Phone ${brand.phones[0]}. Email ${brand.email.sales}.`,
 };
 
 export default function ContactPage() {
@@ -13,7 +13,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Let’s Talk"
-        subtitle="One stop for quality chemicals at competitive prices. Write or call us — we are always there for your chemical needs."
+        subtitle="One stop for quality chemicals at competitive prices. Write or call us. We are always there for your chemical needs."
       >
         <div className="mt-12 grid max-w-4xl gap-8 md:grid-cols-3">
           <div>

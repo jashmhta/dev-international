@@ -27,7 +27,7 @@ const defs: Omit<Application, "slug" | "image">[] = [
     description:
       "Emollients, emulsifiers, and mild surfactants for creams, lotions, serums, and colour cosmetics.",
     detail:
-      "Cosmetic formulators rely on Dev International for a complete raw-material basket — from isopropyl myristate and cetyl palmitate emollients to cetearyl alcohol emulsifier systems, sophorolipid biosurfactants, and hair colour protection molecules. Every lot ships with COA and TDS documentation, with cosmetic-grade and COSMOS-approved source options for natural and organic-certified product lines.",
+      "Cosmetic formulators rely on Dev International for a complete raw-material basket, from isopropyl myristate and cetyl palmitate emollients to cetearyl alcohol emulsifier systems, sophorolipid biosurfactants, and hair colour protection molecules. Every lot ships with COA and TDS documentation, with cosmetic-grade and COSMOS-approved source options for natural and organic-certified product lines.",
     chemicals: [
       "Isopropyl Myristate (IPM)",
       "Isopropyl Palmitate (IPP)",
@@ -49,7 +49,7 @@ const defs: Omit<Application, "slug" | "image">[] = [
     description:
       "Pharma-grade excipients, glycerin BP/IP/USP, and stearates for tablets, syrups, and topicals.",
     detail:
-      "Pharmaceutical manufacturers source pharmacopeia-grade raw materials from Dev International — Glycerin BP, IP, and USP for oral liquids and syrups, stearic acid and magnesium stearate for tabletting, cetostearyl alcohol for ointment bases, and phosphorous compounds for API synthesis. GMP-compliant handling and full traceability support regulatory audit requirements.",
+      "Pharmaceutical manufacturers source pharmacopeia-grade raw materials from Dev International, Glycerin BP, IP, and USP for oral liquids and syrups, stearic acid and magnesium stearate for tabletting, cetostearyl alcohol for ointment bases, and phosphorous compounds for API synthesis. GMP-compliant handling and full traceability support regulatory audit requirements.",
     chemicals: [
       "Glycerin BP / IP / USP",
       "Stearic Acid (Pharma)",
@@ -89,7 +89,7 @@ const defs: Omit<Application, "slug" | "image">[] = [
     description:
       "Soap noodles, fatty acids, and SLS/AOS actives for toilet soaps and syndet bars.",
     detail:
-      "Soap manufacturers depend on our soap noodles, distilled fatty acids (palm, palm kernel, coconut), stearic acid, and glycerin for consistent bar quality. For syndet and combo bars we supply SLS needles/powder, AOS paste, and mild co-surfactants — with grades tuned for lather profile, hardness, and mildness.",
+      "Soap manufacturers depend on our soap noodles, distilled fatty acids (palm, palm kernel, coconut), stearic acid, and glycerin for consistent bar quality. For syndet and combo bars we supply SLS needles/powder, AOS paste, and mild co-surfactants, with grades tuned for lather profile, hardness, and mildness.",
     chemicals: [
       "Soap Noodles",
       "Palm Fatty Acid",
@@ -109,7 +109,7 @@ const defs: Omit<Application, "slug" | "image">[] = [
     description:
       "Surfactant systems, betaines, and solvents for dishwash, laundry, and surface cleaners.",
     detail:
-      "Home care formulators source complete surfactant systems from Dev International — SLS and SLES primaries, CAPB and coco betaine foam boosters, AOS for hard-water tolerance, and amine oxides for thickening and foam stability. Solvent esters and glycol ethers complete degreaser and hard-surface cleaner formulations.",
+      "Home care formulators source complete surfactant systems from Dev International, SLS and SLES primaries, CAPB and coco betaine foam boosters, AOS for hard-water tolerance, and amine oxides for thickening and foam stability. Solvent esters and glycol ethers complete degreaser and hard-surface cleaner formulations.",
     chemicals: [
       "SLS Liquid / Needles / Powder",
       "AOS Liquid / Paste",
@@ -239,7 +239,7 @@ const defs: Omit<Application, "slug" | "image">[] = [
     description:
       "Release coatings, waxes, and esters for pressure-sensitive tape production.",
     detail:
-      "Tape manufacturers depend on our stearates and waxes for release-liner coatings, plasticiser esters for adhesive mass tuning, and solvents for coating operations — with consistent quality that keeps unwind force and tack in specification.",
+      "Tape manufacturers depend on our stearates and waxes for release-liner coatings, plasticiser esters for adhesive mass tuning, and solvents for coating operations, with consistent quality that keeps unwind force and tack in specification.",
     chemicals: [
       "Zinc Stearate",
       "Paraffin Wax",
@@ -293,7 +293,7 @@ const defs: Omit<Application, "slug" | "image">[] = [
     description:
       "Softeners, scouring agents, and ethoxylates for dyeing, finishing, and yarn processing.",
     detail:
-      "Textile mills source our fatty acid ethoxylates and alcohol ethoxylates as wetting and scouring agents, glycerol mono stearate and waxes for softener formulations, and surfactant systems for dye levelling — supporting consistent hand-feel and shade reproducibility.",
+      "Textile mills source our fatty acid ethoxylates and alcohol ethoxylates as wetting and scouring agents, glycerol mono stearate and waxes for softener formulations, and surfactant systems for dye levelling, supporting consistent hand-feel and shade reproducibility.",
     chemicals: [
       "Various Mole Ethoxylates",
       "Glycerol Mono Stearate",
@@ -311,7 +311,7 @@ const defs: Omit<Application, "slug" | "image">[] = [
     description:
       "Sizing waxes, defoamers, and stearates for paper making and converting.",
     detail:
-      "Paper mills use our waxes for coating and moisture barrier applications, metallic stearates in speciality coatings, and fatty alcohol based defoamer intermediates in the wet end — improving machine runnability and sheet quality.",
+      "Paper mills use our waxes for coating and moisture barrier applications, metallic stearates in speciality coatings, and fatty alcohol based defoamer intermediates in the wet end, improving machine runnability and sheet quality.",
     chemicals: [
       "Paraffin Wax",
       "Calcium Stearate",
@@ -345,7 +345,7 @@ const defs: Omit<Application, "slug" | "image">[] = [
     description:
       "Rolling lubricants and coating waxes for foil rolling and lamination.",
     detail:
-      "Foil rollers and converters source fatty alcohols and esters as rolling-oil additives, and waxes for heat-seal and barrier coatings in laminates — with low-residue grades that meet food-contact requirements.",
+      "Foil rollers and converters source fatty alcohols and esters as rolling-oil additives, and waxes for heat-seal and barrier coatings in laminates, with low-residue grades that meet food-contact requirements.",
     chemicals: [
       "Cetyl Alcohol",
       "Stearyl Alcohol 95%",
@@ -380,7 +380,7 @@ const defs: Omit<Application, "slug" | "image">[] = [
     description:
       "Release agents, waxes, and resin intermediates for plywood, MDF, and decorative laminates.",
     detail:
-      "Laminate and panel producers source our waxes as water repellents in particle board, metallic stearates as release agents in press operations, and fatty acids for resin modification — improving board quality and press cycle efficiency.",
+      "Laminate and panel producers source our waxes as water repellents in particle board, metallic stearates as release agents in press operations, and fatty acids for resin modification, improving board quality and press cycle efficiency.",
     chemicals: [
       "Paraffin Wax Emulsion Grade",
       "Zinc Stearate",
@@ -416,7 +416,7 @@ const defs: Omit<Application, "slug" | "image">[] = [
     description:
       "Phosphates, sulphites, and amines for boiler, cooling, and effluent treatment programs.",
     detail:
-      "Water treatment companies source our phosphoric acid and phosphate salts for scale control, sodium sulphite and metabisulphite as oxygen scavengers, and amines for condensate line protection — with consistent purity for reliable dosing programs.",
+      "Water treatment companies source our phosphoric acid and phosphate salts for scale control, sodium sulphite and metabisulphite as oxygen scavengers, and amines for condensate line protection, with consistent purity for reliable dosing programs.",
     chemicals: [
       "Phosphoric Acid",
       "Tri Sodium Phosphate",
@@ -434,7 +434,7 @@ const defs: Omit<Application, "slug" | "image">[] = [
     description:
       "Phosphating chemicals, degreasers, and rust preventives for metal finishing lines.",
     detail:
-      "Metal finishers use our phosphoric acid and zinc phosphate systems for conversion coating, surfactant blends for alkaline degreasing, and oleic derivatives in rust-preventive oil formulations — supporting paint adhesion and corrosion protection.",
+      "Metal finishers use our phosphoric acid and zinc phosphate systems for conversion coating, surfactant blends for alkaline degreasing, and oleic derivatives in rust-preventive oil formulations, supporting paint adhesion and corrosion protection.",
     chemicals: [
       "Phosphoric Acid",
       "Zinc Phosphate",
@@ -452,7 +452,7 @@ const defs: Omit<Application, "slug" | "image">[] = [
     description:
       "Emulsifiers, oleic acid, and esters for soluble cutting oils and metalworking fluids.",
     detail:
-      "Metalworking fluid blenders use our oleic acid and tall oil fatty acids as emulsifier bases, ethoxylates as coupling agents, and phosphate esters as extreme-pressure additives — delivering stable emulsions and improved tool life.",
+      "Metalworking fluid blenders use our oleic acid and tall oil fatty acids as emulsifier bases, ethoxylates as coupling agents, and phosphate esters as extreme-pressure additives, delivering stable emulsions and improved tool life.",
     chemicals: [
       "Oleic Acid",
       "Various Mole Ethoxylates",
@@ -469,7 +469,7 @@ const defs: Omit<Application, "slug" | "image">[] = [
     description:
       "Core binders, release agents, and coating carriers for casting operations.",
     detail:
-      "Foundries source our linseed-oil based core binders, waxes and stearates as pattern release agents, and solvent carriers for refractory coatings — supporting clean strip, surface finish, and dimensional accuracy in castings.",
+      "Foundries source our linseed-oil based core binders, waxes and stearates as pattern release agents, and solvent carriers for refractory coatings, supporting clean strip, surface finish, and dimensional accuracy in castings.",
     chemicals: [
       "Linseed Oil",
       "Zinc Stearate",
@@ -486,7 +486,7 @@ const defs: Omit<Application, "slug" | "image">[] = [
     description:
       "Sulphites, phosphorous compounds, and dispersants for dyestuff synthesis and standardisation.",
     detail:
-      "Dyestuff manufacturers use our sodium sulphide and sulphites in reduction steps, phosphorous compounds in intermediate synthesis, and ethoxylate dispersants in finishing and standardisation — with reliable supply that keeps multi-step syntheses on schedule.",
+      "Dyestuff manufacturers use our sodium sulphide and sulphites in reduction steps, phosphorous compounds in intermediate synthesis, and ethoxylate dispersants in finishing and standardisation, with reliable supply that keeps multi-step syntheses on schedule.",
     chemicals: [
       "Sodium Sulphite",
       "Sodium Hydrosulphite",
@@ -503,7 +503,7 @@ const defs: Omit<Application, "slug" | "image">[] = [
     description:
       "Demulsifiers, corrosion inhibitors, and surfactant intermediates for upstream operations.",
     detail:
-      "Oil field service companies source our ethoxylates as demulsifier intermediates, amine derivatives for corrosion inhibition, and phosphate esters for scale control — engineered for the high-salinity, high-temperature environments of producing wells.",
+      "Oil field service companies source our ethoxylates as demulsifier intermediates, amine derivatives for corrosion inhibition, and phosphate esters for scale control, engineered for the high-salinity, high-temperature environments of producing wells.",
     chemicals: [
       "Various Mole Ethoxylates",
       "Cyclohexylamine",
@@ -520,7 +520,7 @@ const defs: Omit<Application, "slug" | "image">[] = [
     description:
       "Ointment bases, petroleum jelly, and lanolin substitutes for dermatological products.",
     detail:
-      "Topical formulation manufacturers use our white soft paraffin and petroleum jelly as ointment bases, cetostearyl alcohol and emulsifying wax for cream systems, and IPM for skin-feel modification — all in pharma-grade quality with GMP documentation.",
+      "Topical formulation manufacturers use our white soft paraffin and petroleum jelly as ointment bases, cetostearyl alcohol and emulsifying wax for cream systems, and IPM for skin-feel modification, all in pharma-grade quality with GMP documentation.",
     chemicals: [
       "White Soft Paraffin",
       "Petroleum Jelly",
@@ -538,7 +538,7 @@ const defs: Omit<Application, "slug" | "image">[] = [
     description:
       "Pharma-grade glycerin and excipients for oral liquid formulations.",
     detail:
-      "Oral liquid manufacturers rely on our Glycerin BP/IP/USP as sweetener, humectant, and viscosity builder in cough syrups and suspensions, plus sorbitol solutions and preservative systems — with pharmacopeia compliance on every lot.",
+      "Oral liquid manufacturers rely on our Glycerin BP/IP/USP as sweetener, humectant, and viscosity builder in cough syrups and suspensions, plus sorbitol solutions and preservative systems, with pharmacopeia compliance on every lot.",
     chemicals: [
       "Glycerin BP / IP / USP",
       "Sorbitol 70%",
@@ -554,7 +554,7 @@ const defs: Omit<Application, "slug" | "image">[] = [
     description:
       "Zinc, calcium, magnesium, and aluminium stearates for plastics, rubber, and coatings.",
     detail:
-      "We supply the full metallic stearate family — zinc stearate for rubber dusting and PVC stabilisation, calcium stearate as lubricant and water repellent, magnesium stearate for pharma tabletting, and aluminium stearate for grease and paint thickening.",
+      "We supply the full metallic stearate family, zinc stearate for rubber dusting and PVC stabilisation, calcium stearate as lubricant and water repellent, magnesium stearate for pharma tabletting, and aluminium stearate for grease and paint thickening.",
     chemicals: [
       "Zinc Stearate",
       "Calcium Stearate",
@@ -589,7 +589,7 @@ const defs: Omit<Application, "slug" | "image">[] = [
     description:
       "Custom intermediates, niche esters, and specialty blends for fine chemical manufacturing.",
     detail:
-      "For specialty chemical producers we source niche esters, custom ethoxylates, phosphorous intermediates, and specialty blends — leveraging our vetted manufacturer network to solve one-off and recurring sourcing challenges across fine chemical value chains.",
+      "For specialty chemical producers we source niche esters, custom ethoxylates, phosphorous intermediates, and specialty blends, leveraging our vetted manufacturer network to solve one-off and recurring sourcing challenges across fine chemical value chains.",
     chemicals: [
       "Specialty Emulsifiers",
       "Custom Ethoxylates",

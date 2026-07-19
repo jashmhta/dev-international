@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = products.find((p) => p.slug === slug);
   if (!product) return { title: "Product" };
   return {
-    title: `${product.title} — Supplier in Mumbai, India`,
+    title: `${product.title} | Supplier in Mumbai, India`,
     description: `${product.blurb} Buy ${product.title.toLowerCase()} from ${brand.name}, trusted specialty chemicals supplier in Mumbai since ${brand.established}. COA & TDS available.`,
     alternates: { canonical: product.href },
     openGraph: {

@@ -168,7 +168,7 @@ export const products: Product[] = [
     href: "/products/stearic-acid",
     image: "/images/brand/product-stearic-acid.webp",
     blurb:
-      "Stearic acid across cosmetic, polymer, rubber, and specialty grades — supplied for formulations demanding consistent purity.",
+      "Stearic acid across cosmetic, polymer, rubber, and specialty grades, supplied for formulations demanding consistent purity.",
     items: [
       "Stearic Content Min 90%",
       "Stearic Acid Cosmetic Grade",
@@ -391,7 +391,7 @@ export const products: Product[] = [
     href: "/products/various-mole-ethoxylates",
     image: "/images/brand/product-ethoxylates.webp",
     blurb:
-      "PEG grades and ethoxylates of alcohols, phenols, acids, amines, and oils — across all mole ranges for industrial and formulation use.",
+      "PEG grades and ethoxylates of alcohols, phenols, acids, amines, and oils, across all mole ranges for industrial and formulation use.",
     items: [
       "PEG-200",
       "PEG-300",
@@ -448,7 +448,7 @@ export const products: Product[] = [
     items: [
       "Soap Noodles",
       "Casein",
-      "LA — All Mole Ethoxylates",
+      "LA, All Mole Ethoxylates",
       "Laurate",
       "Palmitate",
       "Myristate",
@@ -563,19 +563,19 @@ export const process = [
     n: "02",
     title: "Sourcing & Quotation",
     body: "We draw from vetted manufacturers and our stocked inventory to quote competitive pricing with clear lead times.",
-    tag: "Day 1–2",
+    tag: "Day 1-2",
   },
   {
     n: "03",
     title: "Quality Assurance",
     body: "Each lot is checked against agreed specifications and supported with COA / TDS documentation before dispatch.",
-    tag: "Day 2–3",
+    tag: "Day 2-3",
   },
   {
     n: "04",
     title: "Dispatch & Logistics",
-    body: "Packed, labelled, and shipped from our Bhiwandi warehouse — coordinated for timely delivery across India.",
-    tag: "Day 3–5",
+    body: "Packed, labelled, and shipped from our Bhiwandi warehouse, coordinated for timely delivery across India.",
+    tag: "Day 3-5",
   },
   {
     n: "05",
@@ -650,7 +650,7 @@ export const faqs = [
   },
   {
     q: "Which geographies do you serve?",
-    a: "We supply across India from our Mumbai office and Bhiwandi warehouse. We also support export enquiries for select grades — confirm with our sales team for your destination.",
+    a: "We supply across India from our Mumbai office and Bhiwandi warehouse. We also support export enquiries for select grades, confirm with our sales team for your destination.",
   },
   {
     q: "Can you supply custom or blended grades?",
@@ -662,14 +662,14 @@ export const faqs = [
   },
   {
     q: "How quickly can you dispatch?",
-    a: "Stocked items from our Bhiwandi godown dispatch within 1–3 working days. Make-to-order or tanker loads follow the manufacturer lead time, which we confirm at quotation.",
+    a: "Stocked items from our Bhiwandi godown dispatch within 1-3 working days. Make-to-order or tanker loads follow the manufacturer lead time, which we confirm at quotation.",
   },
 ] as const;
 
 export const sustainabilityPillars = [
   {
     title: "Bio-based Feedstock",
-    body: "We prioritise oleochemicals derived from renewable plant oils — palm, coconut, and soya — reducing dependence on petrochemical inputs.",
+    body: "We prioritise oleochemicals derived from renewable plant oils, palm, coconut, and soya, reducing dependence on petrochemical inputs.",
   },
   {
     title: "Mass Balance Sourcing",
@@ -681,6 +681,6 @@ export const sustainabilityPillars = [
   },
   {
     title: "Documentation & Traceability",
-    body: "Full COA, TDS, and origin documentation on every lot — so your sustainability claims are backed by verifiable records.",
+    body: "Full COA, TDS, and origin documentation on every lot, so your sustainability claims are backed by verifiable records.",
   },
 ] as const;

@@ -6,7 +6,7 @@ import ProcessClient from "./ProcessClient";
 
 export const metadata: Metadata = {
   title: "Our Process",
-  description: `From enquiry to after-sales — the ${brand.name} supply process, step by step.`,
+  description: `From enquiry to after-sales, the ${brand.name} supply process, step by step.`,
 };
 
 export default function ProcessPage() {
@@ -56,7 +56,7 @@ export default function ProcessPage() {
             </h2>
             <p className="body-lg mt-6 max-w-md text-white/60">
               Our central warehouse at Bhiwandi keeps stocked items ready for
-              1–3 day dispatch. Tanker loads and make-to-order items follow the
+              1-3 day dispatch. Tanker loads and make-to-order items follow the
               confirmed manufacturer lead time.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">

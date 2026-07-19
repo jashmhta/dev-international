@@ -10,7 +10,7 @@ import { BreadcrumbSchema } from "@/components/Schema";
 
 export const metadata: Metadata = {
   title: "Applications & Industry Sectors",
-  description: `32 industry applications served by ${brand.name} — cosmetics, pharma, paints, plastics, food, construction, water treatment, and more. Specialty chemicals for every sector.`,
+  description: `32 industry applications served by ${brand.name}, cosmetics, pharma, paints, plastics, food, construction, water treatment, and more. Specialty chemicals for every sector.`,
   alternates: { canonical: "/applications" },
 };
 
@@ -26,7 +26,7 @@ export default function ApplicationsPage() {
       <PageHero
         eyebrow="Applications · Sectors"
         title="Where Our Chemicals Work"
-        subtitle="From skin care to steel — 32 applications across 6 industry sectors, supplied with specialty chemicals from one roof in Mumbai."
+        subtitle="From skin care to steel: 32 applications across 6 industry sectors, supplied with specialty chemicals from one roof in Mumbai."
         bgImage="/images/brand/banner1.webp"
         showScroll
       />
@@ -53,7 +53,7 @@ export default function ApplicationsPage() {
                         <div className="relative aspect-[4/3] overflow-hidden">
                           <Img
                             src={app.image}
-                            alt={`${app.title} — chemicals by ${brand.name}`}
+                            alt={`${app.title}, chemicals by ${brand.name}`}
                             className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                           />
                         </div>
@@ -81,7 +81,7 @@ export default function ApplicationsPage() {
               Need a chemical for your process?
             </h2>
             <p className="mt-4 max-w-xl text-white/70">
-              Tell us your industry and application — our team will recommend
+              Tell us your industry and application, our team will recommend
               grades and arrange competitive supply from Mumbai.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">

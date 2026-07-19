@@ -14,17 +14,17 @@ const features = [
   {
     id: "02",
     title: "World-Class Atmospheric Monitoring (aMRV)",
-    body: "Our system combines ground-truth data with real-time atmospheric measurements—the same methods used in the WMO’s Annual State of the Global Climate Report.",
+    body: "Our system combines ground-truth data with real-time atmospheric measurements-the same methods used in the WMO’s Annual State of the Global Climate Report.",
   },
   {
     id: "03",
     title: "Integrated Algorithmic Processing",
-    body: "High-frequency data is analyzed at every stage—ensuring accuracy, eliminating estimation bias, and turning raw data into decision-ready insights.",
+    body: "High-frequency data is analyzed at every stage-ensuring accuracy, eliminating estimation bias, and turning raw data into decision-ready insights.",
   },
   {
     id: "04",
     title: "Blockchain-Secured Traceability",
-    body: "Every metric is verifiable, audit-ready, and tamper-proof—so you can meet regulatory expectations with credibility.",
+    body: "Every metric is verifiable, audit-ready, and tamper-proof-so you can meet regulatory expectations with credibility.",
   },
   {
     id: "05",
@@ -171,7 +171,7 @@ export function Vision() {
           </p>
           <h2 className="display-md text-white">
             Our Ecosystem-Level Accounting Solutions translate complex scientific
-            data into verifiable, compliance-ready metrics—so you can drive
+            data into verifiable, compliance-ready metrics-so you can drive
             measurable results, not just reports.
           </h2>
         </div>

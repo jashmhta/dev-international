@@ -7,9 +7,11 @@ import type { Product } from "@/lib/brand";
 import { products, brand } from "@/lib/brand";
 import { getProductDetail } from "@/lib/productDetails";
 import { applicationsData } from "@/lib/applications";
+import { datasheetsForFamily } from "@/lib/datasheets";
 
 export function ProductPage({ product }: { product: Product }) {
   const detail = getProductDetail(product.slug);
+  const familySheets = datasheetsForFamily(product.slug);
   const others = products.filter((p) => p.slug !== product.slug).slice(0, 4);
   const relatedApps = detail
     ? applicationsData.filter((a) => detail.applications.includes(a.slug))
@@ -40,7 +42,7 @@ export function ProductPage({ product }: { product: Product }) {
               <Reveal>
                 <span className="label-pill">Overview</span>
                 <h2 className="display-md mt-4 text-alethia-dark">
-                  {product.title} — supply, grades &amp; analysis
+                  {product.title}: supply, grades &amp; analysis
                 </h2>
               </Reveal>
               <div className="mt-6 space-y-4">
@@ -77,7 +79,7 @@ export function ProductPage({ product }: { product: Product }) {
                 <div className="overflow-hidden rounded-[24px]">
                   <Img
                     src={product.image}
-                    alt={`${product.title} — ${brand.name}`}
+                    alt={`${product.title}, ${brand.name}`}
                     className="aspect-[4/3] w-full object-cover"
                   />
                 </div>
@@ -130,7 +132,7 @@ export function ProductPage({ product }: { product: Product }) {
       </section>
 
       {/* Technical datasheets */}
-      {detail?.pdfs && detail.pdfs.length > 0 && (
+      {familySheets.length > 0 && (
         <section className="section-light py-14 md:py-20">
           <div className="site-container">
             <Reveal>
@@ -139,31 +141,37 @@ export function ProductPage({ product }: { product: Product }) {
                 Technical datasheets
               </h2>
               <p className="mt-3 max-w-xl text-[15px] text-alethia-dark/60">
-                Download specifications for key grades. COA, MSDS, and
-                additional documents available on request.
+                Read full specifications for every grade directly on the page.
+                COA, MSDS, and additional documents available on request.
               </p>
             </Reveal>
             <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {detail.pdfs.map((pdf, i) => (
-                <Reveal key={pdf.file} delay={(i % 3) * 0.05}>
-                  <a
-                    href={encodeURI(pdf.file)}
-                    target="_blank"
-                    rel="noreferrer"
+              {familySheets.map((sheet, i) => (
+                <Reveal key={sheet.slug} delay={(i % 3) * 0.05}>
+                  <Link
+                    href={`/datasheets/${sheet.slug}`}
                     className="group flex items-center justify-between gap-4 rounded-2xl border border-alethia-dark/10 bg-white px-5 py-4 shadow-sm transition hover:-translate-y-0.5 hover:border-[#5c8a3f]/40 hover:shadow-md"
                   >
                     <div className="flex items-center gap-3">
                       <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-[#eef4e6] font-mono text-[10px] font-semibold text-[#5c8a3f]">
-                        PDF
+                        SPEC
                       </span>
-                      <span className="text-[14px] font-medium text-alethia-dark">
-                        {pdf.name}
-                      </span>
+                      <div>
+                        <span className="block text-[14px] font-medium text-alethia-dark">
+                          {sheet.name}
+                        </span>
+                        <span className="mt-0.5 block font-mono text-[10px] uppercase tracking-[0.1em] text-alethia-dark/40">
+                          Full specifications
+                        </span>
+                      </div>
                     </div>
-                    <span className="font-mono text-[11px] uppercase tracking-wide text-alethia-dark/40 transition group-hover:text-[#5c8a3f]">
-                      ↓
+                    <span
+                      className="font-mono text-[12px] text-alethia-dark/40 transition group-hover:translate-x-0.5 group-hover:text-[#5c8a3f]"
+                      aria-hidden
+                    >
+                      →
                     </span>
-                  </a>
+                  </Link>
                 </Reveal>
               ))}
             </div>

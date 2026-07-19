@@ -17,7 +17,7 @@ export function VisionOutro() {
         </Reveal>
         <Reveal delay={0.14}>
           <p className="mt-3 max-w-2xl body-lg text-white/70">
-            Quality products, competitive pricing, and timely service — for
+            Quality products, competitive pricing, and timely service, for
             multinationals, MSMEs, and trade houses across India and beyond.
           </p>
         </Reveal>

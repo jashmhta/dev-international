@@ -15,15 +15,15 @@ import { News } from "@/components/home/News";
 export default function HomePage() {
   return (
     <>
-      {/* 1. Hero — eco background image */}
+      {/* 1. Hero, eco background image */}
       <Hero />
-      {/* 2. Rock 3D island — eco-friendly narrative */}
+      {/* 2. Rock 3D island, eco-friendly narrative */}
       <ScrollNarrative />
-      {/* 3. About Us — founder + company years */}
+      {/* 3. About Us, founder + company years */}
       <AboutSection />
       {/* 4. Testimonials */}
       <Testimonials />
-      {/* 5. Products — eco-friendly green */}
+      {/* 5. Products, eco-friendly green */}
       <ProductShowcase />
       {/* Supporting sections */}
       <Stats />

@@ -24,7 +24,7 @@ export default function FaqPage() {
       <PageHero
         eyebrow="FAQ"
         title="Questions we answer every day."
-        subtitle="From minimum order quantity to documentation and dispatch timelines — the practical details buyers need before they reach out."
+        subtitle="From minimum order quantity to documentation and dispatch timelines: the practical details buyers need before they reach out."
         showScroll
       />
 
@@ -42,7 +42,7 @@ export default function FaqPage() {
             <h2 className="display-md">Did not find your answer?</h2>
             <p className="mt-4 text-alethia-dark/70">
               Our sales team responds to enquiries within working hours. Share
-              your product, grade, and quantity — we will confirm MOQ, pricing,
+              your product, grade, and quantity, we will confirm MOQ, pricing,
               and dispatch.
             </p>
             <div className="mt-8 flex justify-center">

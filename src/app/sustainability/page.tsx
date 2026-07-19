@@ -56,7 +56,7 @@ export default function SustainabilityPage() {
             <p className="mt-6 max-w-md text-white/60">
               Oleo derivatives, fatty acids, fatty alcohols, esters, and
               glycerin are produced from renewable palm, coconut, and soya oils
-              — making them bio-based inputs for cosmetics, pharma, and
+             , making them bio-based inputs for cosmetics, pharma, and
               industrial formulations alike.
             </p>
             <div className="mt-8">
@@ -76,7 +76,7 @@ export default function SustainabilityPage() {
               Want documentation for your sustainability claim?
             </h2>
             <p className="mt-4 max-w-xl text-white/70">
-              Share your claim and product line — we will confirm available
+              Share your claim and product line, we will confirm available
               certifications, origin, and mass-balance documentation before you
               commit.
             </p>
