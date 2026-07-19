@@ -1,14 +1,71 @@
 import Link from "next/link";
 import { ArrowRight } from "../ui/Icons";
-import { products } from "@/lib/brand";
 
-const items = products.slice(0, 3).map((p) => ({
-  href: p.href,
-  tag: "Product Line",
-  date: "Specialty Chemicals",
-  title: p.title,
-  excerpt: p.blurb,
-}));
+const ctas = [
+  {
+    href: "/about",
+    tag: "Company",
+    title: "About Us",
+    excerpt:
+      "Three decades of specialty chemical supply, from a Mumbai office and Bhiwandi warehouse to 30+ industries.",
+  },
+  {
+    href: "/leadership",
+    tag: "Company",
+    title: "Leadership",
+    excerpt:
+      "Meet Devesh Metha and the team behind consistent quality, honest pricing, and on-time dispatch.",
+  },
+  {
+    href: "/sustainability",
+    tag: "Company",
+    title: "Sustainability",
+    excerpt:
+      "Bio-based feedstocks, renewable plant oils, and traceable green supply chains at the core of our portfolio.",
+  },
+  {
+    href: "/process",
+    tag: "Capabilities",
+    title: "Our Process",
+    excerpt:
+      "From enquiry to dispatch: how we source, quality-check, and deliver every order you place.",
+  },
+  {
+    href: "/quality",
+    tag: "Capabilities",
+    title: "Quality & Compliance",
+    excerpt:
+      "ISO, Kosher, and Halal certified grades with datasheets you can read directly on this site.",
+  },
+  {
+    href: "/logistics",
+    tag: "Capabilities",
+    title: "Logistics",
+    excerpt:
+      "A well-equipped Bhiwandi godown and trained professionals managing orders across India.",
+  },
+  {
+    href: "/applications",
+    tag: "Explore",
+    title: "Applications",
+    excerpt:
+      "32 industries served, from pharmaceuticals and cosmetics to paints, rubber, and water treatment.",
+  },
+  {
+    href: "/faq",
+    tag: "Explore",
+    title: "FAQ",
+    excerpt:
+      "Answers on minimum order quantities, certifications, delivery timelines, and technical support.",
+  },
+  {
+    href: "/contact",
+    tag: "Explore",
+    title: "Contact Us",
+    excerpt:
+      "Request a quote, talk to sales on WhatsApp, or write to us. We respond within one business day.",
+  },
+];
 
 export function News() {
   return (
@@ -16,9 +73,9 @@ export function News() {
       <div className="site-container">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
-            <span className="label-pill">Featured Product Lines</span>
+            <span className="label-pill">Explore Dev International</span>
             <h2 className="display-lg mt-6 text-alethia-dark">
-              Chemicals that Power Formulations.
+              Everything else you came looking for.
             </h2>
           </div>
           <Link
@@ -29,28 +86,27 @@ export function News() {
           </Link>
         </div>
 
-        <div className="mt-10 grid gap-4 md:mt-12">
-          {items.map((item) => (
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 md:mt-12 lg:grid-cols-3">
+          {ctas.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="group grid gap-4 rounded-[20px] border border-alethia-dark/8 bg-white p-5 transition hover:shadow-lg md:grid-cols-[160px_1fr_auto] md:items-center md:gap-6 md:p-7 md:rounded-[24px]"
+              className="group flex flex-col justify-between gap-6 rounded-[20px] border border-alethia-dark/8 bg-white p-6 transition hover:-translate-y-0.5 hover:shadow-lg md:rounded-[24px] md:p-7"
             >
-              <div className="flex flex-row items-center gap-3 md:flex-col md:gap-2">
-                <span className="label-pill w-fit">{item.tag}</span>
-                <span className="font-mono text-[11px] text-alethia-dark/45 md:text-[12px]">
-                  {item.date}
-                </span>
-              </div>
               <div>
-                <h3 className="text-[1.15rem] font-medium leading-snug tracking-[-0.02em] text-alethia-dark md:text-[1.35rem]">
+                <div className="flex items-center justify-between">
+                  <span className="label-pill w-fit">{item.tag}</span>
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full border border-alethia-dark/15 text-alethia-dark transition group-hover:border-alethia-lime group-hover:bg-alethia-lime">
+                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:-rotate-45" />
+                  </span>
+                </div>
+                <h3 className="mt-5 text-[1.2rem] font-medium leading-snug tracking-[-0.02em] text-alethia-dark md:text-[1.3rem]">
                   {item.title}
                 </h3>
-                <p className="mt-1 text-[13px] text-alethia-dark/60 md:mt-2 md:text-sm">{item.excerpt}</p>
+                <p className="mt-2 text-[13px] leading-relaxed text-alethia-dark/60 md:text-sm">
+                  {item.excerpt}
+                </p>
               </div>
-              <span className="hidden h-10 w-10 items-center justify-center rounded-full border border-alethia-dark/15 text-alethia-dark transition group-hover:bg-alethia-lime group-hover:border-alethia-lime md:flex">
-                <ArrowRight className="h-4 w-4" />
-              </span>
             </Link>
           ))}
         </div>

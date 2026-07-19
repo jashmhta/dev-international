@@ -165,7 +165,7 @@ export function Hero() {
             >
               <Button href="/contact">Request a Quote</Button>
               <a
-                href="#products"
+                href="#catalogue"
                 className="font-mono text-[12px] uppercase tracking-[0.08em] text-[#f5f4f2]/70 transition hover:text-[#c6f19d]"
               >
                 Browse products

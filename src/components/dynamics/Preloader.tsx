@@ -42,7 +42,7 @@ export function Preloader() {
               <img
                 src={brand.logo}
                 alt=""
-                className="h-10 w-auto brightness-0 invert md:h-12"
+                className="h-10 w-auto md:h-12"
               />
             </motion.div>
           </motion.div>

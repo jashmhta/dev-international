@@ -4,7 +4,6 @@ import { AboutSection } from "@/components/home/AboutSection";
 import { Testimonials } from "@/components/home/Testimonials";
 import { ProductShowcase } from "@/components/home/ProductShowcase";
 import { Stats } from "@/components/home/Stats";
-import { Solutions } from "@/components/home/Solutions";
 import { Manifesto } from "@/components/home/Manifesto";
 import { Process } from "@/components/home/Process";
 import { IndustriesGrid } from "@/components/home/IndustriesGrid";
@@ -27,7 +26,6 @@ export default function HomePage() {
       <ProductShowcase />
       {/* Supporting sections */}
       <Stats />
-      <Solutions />
       <Manifesto />
       <Process />
       <IndustriesGrid />

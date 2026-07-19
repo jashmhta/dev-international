@@ -60,7 +60,7 @@ export function Header() {
               alt={brand.name}
               width={180}
               height={36}
-              className="h-9 w-auto max-w-[200px] object-contain object-left brightness-0 invert"
+              className="h-9 w-auto max-w-[200px] object-contain object-left"
             />
           </Link>
 
@@ -141,7 +141,7 @@ export function Header() {
               alt={brand.name}
               width={150}
               height={30}
-              className="h-6 w-auto max-w-[140px] object-contain object-left brightness-0 invert"
+              className="h-6 w-auto max-w-[140px] object-contain object-left"
             />
           </Link>
 

@@ -64,7 +64,7 @@ export function Footer() {
               alt={brand.name}
               width={362}
               height={70}
-              className="mb-4 h-9 w-auto brightness-0 invert"
+              className="mb-4 h-9 w-auto"
             />
             <p className="text-sm leading-relaxed text-white/60">
               {brand.address.full}
