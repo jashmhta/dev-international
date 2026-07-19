@@ -30,7 +30,7 @@ export function SplitText({ text, className = "", as = "h2" }: Props) {
 
     const tween = gsap.fromTo(
       words,
-      { opacity: 0.12 },
+      { opacity: 0.35 },
       {
         opacity: 1,
         stagger: 0.5,
@@ -52,12 +52,15 @@ export function SplitText({ text, className = "", as = "h2" }: Props) {
 
   return (
     <Tag ref={ref as React.RefObject<HTMLHeadingElement>} className={className}>
-      {text.split(" ").map((word, i) => (
-        <span key={i} data-word className="inline-block">
-          {word}
-          {i < text.split(" ").length - 1 ? "\u00A0" : ""}
-        </span>
-      ))}
+      <span className="sr-only">{text}</span>
+      <span aria-hidden="true">
+        {text.split(" ").map((word, i) => (
+          <span key={i} data-word className="inline-block">
+            {word}
+            {i < text.split(" ").length - 1 ? "\u00A0" : ""}
+          </span>
+        ))}
+      </span>
     </Tag>
   );
 }

@@ -5,17 +5,17 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "../ui/Button";
 import { ScrollHint } from "../ui/Icons";
-import { Img } from "../ui/Img";
 import { brand } from "@/lib/brand";
 
 gsap.registerPlugin(ScrollTrigger);
 
 /**
- * Hero — same 3D rock assets, Dev International branding.
+ * Hero — cinematic eco-chemistry background image.
+ * The 3D rock/island lives in the next section (ScrollNarrative).
  */
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
-  const rocksRef = useRef<HTMLDivElement>(null);
+  const bgRef = useRef<HTMLDivElement>(null);
   const fadeRef = useRef<HTMLDivElement>(null);
   const chipRef = useRef<HTMLDivElement>(null);
 
@@ -25,6 +25,29 @@ export function Hero() {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     const ctx = gsap.context(() => {
+      // Entrance animation
+      if (!reduce) {
+        gsap.fromTo(
+          "[data-hero-reveal]",
+          { y: 28, autoAlpha: 0 },
+          {
+            y: 0,
+            autoAlpha: 1,
+            duration: 0.7,
+            ease: "power3.out",
+            stagger: 0.07,
+            delay: 0,
+          }
+        );
+        if (bgRef.current) {
+          gsap.fromTo(
+            bgRef.current,
+            { scale: 1.08 },
+            { scale: 1, duration: 2.2, ease: "power2.out" }
+          );
+        }
+      }
+      // Scroll fade / parallax
       if (fadeRef.current) {
         gsap.to(fadeRef.current, {
           autoAlpha: 0,
@@ -38,9 +61,9 @@ export function Hero() {
           },
         });
       }
-      if (rocksRef.current && !reduce) {
-        gsap.to(rocksRef.current, {
-          yPercent: 5,
+      if (bgRef.current && !reduce) {
+        gsap.to(bgRef.current, {
+          yPercent: 10,
           ease: "none",
           scrollTrigger: {
             trigger: section,
@@ -59,18 +82,6 @@ export function Hero() {
           repeat: -1,
         });
       }
-      if (!reduce) {
-        gsap.utils.toArray<HTMLElement>("[data-rock-float]").forEach((el, i) => {
-          gsap.to(el, {
-            y: i % 2 === 0 ? -10 : 8,
-            duration: 3.2 + i * 0.4,
-            ease: "sine.inOut",
-            yoyo: true,
-            repeat: -1,
-            delay: i * 0.25,
-          });
-        });
-      }
     }, section);
 
     return () => ctx.revert();
@@ -82,59 +93,30 @@ export function Hero() {
       id="hero"
       className="relative min-h-[100dvh] overflow-hidden bg-[#0f1f10]"
     >
+      {/* Background image */}
       <div
-        ref={rocksRef}
-        className="pointer-events-none absolute inset-0 select-none"
+        ref={bgRef}
+        className="pointer-events-none absolute inset-0 select-none will-change-transform"
         aria-hidden
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0f1f10] via-[#0f1f10]/70 to-transparent md:from-[#0f1f10]/90 md:via-[#0f1f10]/40" />
-        <div className="absolute left-1/2 top-[20%] h-[50%] w-[90%] -translate-x-1/2 sm:left-[20%] sm:top-[12%] sm:h-[68%] sm:w-[76%] sm:translate-x-0 md:left-[28%] md:top-[4%] md:h-[84%] md:w-[62%] lg:left-[32%] lg:top-[2%] lg:h-[88%] lg:w-[56%] xl:left-[34%] xl:w-[54%]">
-          <Img
-            src="/images/hero-rock.png"
-            alt=""
-            priority
-            className="h-full w-full object-contain object-center drop-shadow-[0_28px_55px_rgba(0,0,0,0.38)]"
-          />
-        </div>
-
-        <div
-          data-rock-float
-          className="absolute bottom-[20%] left-[2%] w-[28%] max-w-[160px] sm:bottom-[18%] sm:left-[0%] sm:w-[26%] sm:max-w-[250px] md:bottom-[16%] md:left-[1.5%] md:w-[17%] md:max-w-[240px] lg:bottom-[17%] lg:left-[2.5%] lg:w-[15.5%]"
-        >
-          <Img
-            src="/images/rock-bl.png"
-            alt=""
-            className="h-auto w-full drop-shadow-[0_16px_36px_rgba(0,0,0,0.42)]"
-          />
-        </div>
-
-        <div
-          data-rock-float
-          className="absolute bottom-[14%] right-[2%] w-[26%] max-w-[150px] sm:bottom-[10%] sm:right-[-2%] sm:w-[24%] sm:max-w-[230px] md:bottom-[10%] md:right-[0%] md:w-[15%] md:max-w-[220px] lg:bottom-[11%] lg:right-[1%] lg:w-[14%]"
-        >
-          <Img
-            src="/images/rock-br.png"
-            alt=""
-            className="h-auto w-full drop-shadow-[0_16px_36px_rgba(0,0,0,0.42)]"
-          />
-        </div>
-
-        <div
-          data-rock-float
-          className="absolute right-[10%] top-[34%] z-[6] w-[14%] max-w-[52px] sm:right-[8%] sm:top-[13%] sm:z-0 sm:w-[10%] sm:max-w-[88px] md:right-[11%] md:top-[13%] md:w-[6.5%] md:max-w-[82px] lg:right-[13%] lg:top-[14%] lg:w-[5.5%]"
-        >
-          <Img
-            src="/images/rock-tr.png"
-            alt=""
-            className="h-auto w-full drop-shadow-[0_10px_24px_rgba(0,0,0,0.35)]"
-          />
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/hero/hero-bg.webp"
+          alt=""
+          fetchPriority="high"
+          decoding="async"
+          className="h-full w-full object-cover object-[70%_center] md:object-center"
+        />
+        {/* Readability overlays */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0f1f10]/95 via-[#0f1f10]/60 to-[#0f1f10]/20" />
+        <div className="absolute inset-x-0 bottom-0 h-[30%] bg-gradient-to-t from-[#0f1f10] to-transparent" />
       </div>
 
+      {/* Est. chip */}
       <div
         ref={chipRef}
         className="pointer-events-none absolute z-[5] hidden lg:block"
-        style={{ left: "62%", top: "48%" }}
+        style={{ left: "62%", top: "44%" }}
         aria-hidden
       >
         <div className="absolute -left-16 -top-14 h-[120px] w-[140px] rounded-sm border border-white/15" />
@@ -142,9 +124,9 @@ export function Hero() {
           Est. {brand.established}
         </div>
         <p className="mt-1.5 max-w-[210px] font-mono text-[9px] uppercase leading-[1.4] tracking-[0.04em] text-[#f5f4f2]/75">
-          Specialty Chemicals · Oleo Derivatives
+          Eco-Conscious Specialty Chemicals
           <br />
-          Fatty Alcohol · Surfactants · Solvents
+          Bio-Based · Plant-Derived · Traceable
         </p>
       </div>
 
@@ -154,20 +136,33 @@ export function Hero() {
         style={{ paddingTop: "var(--header-h)" }}
       >
         <div className="site-container flex flex-1 flex-col justify-between pb-6 pt-6 sm:pb-8 sm:pt-8 md:pb-10 md:pt-[56px] xl:pb-12 xl:pt-[71px]">
-          <div className="relative z-10 max-w-[min(100%,740px)]">
-            <h1 className="display-xl text-[#f5f4f2]">
+          <div className="relative z-10 max-w-[min(100%,760px)]">
+            <p
+              data-hero-reveal
+              className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#c6f19d]/30 bg-[#c6f19d]/10 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.1em] text-[#c6f19d]"
+            >
+              <span className="h-1.5 w-1.5 rounded-full bg-[#c6f19d]" />
+              Eco-friendly chemistry since {brand.established}
+            </p>
+            <h1 className="display-xl hero-title-in text-[#f5f4f2]">
               Specialty Chemicals
               <br />
               for Every Industry
               <br />
               Under One Roof
             </h1>
-            <p className="mt-6 max-w-[min(100%,420px)] text-[15px] leading-[1.5] tracking-[-0.01em] text-[#f5f4f2]/80 sm:text-[16px] md:mt-8">
-              Oleo derivatives, fatty alcohols, esters, glycerin, waxes, and
-              surfactants — sourced, checked, and dispatched from Mumbai since{" "}
-              {brand.established}.
+            <p
+              data-hero-reveal
+              className="mt-6 max-w-[min(100%,440px)] text-[15px] leading-[1.5] tracking-[-0.01em] text-[#f5f4f2]/80 sm:text-[16px] md:mt-8"
+            >
+              Bio-based oleo derivatives, fatty alcohols, esters, glycerin,
+              waxes, and surfactants — plant-derived, quality-checked, and
+              dispatched from Mumbai since {brand.established}.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4 md:mt-10">
+            <div
+              data-hero-reveal
+              className="mt-8 flex flex-wrap items-center gap-4 md:mt-10"
+            >
               <Button href="/contact">Request a Quote</Button>
               <a
                 href="#products"
@@ -178,13 +173,17 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative z-10 mt-auto flex flex-col gap-6 pt-10 md:mt-0 md:flex-row md:items-end md:justify-between md:gap-8 md:pt-0">
+          <div
+            data-hero-reveal
+            className="relative z-10 mt-auto flex flex-col gap-6 pt-10 md:mt-0 md:flex-row md:items-end md:justify-between md:gap-8 md:pt-0"
+          >
             <p className="max-w-[min(100%,380px)] text-[14px] leading-[1.5] tracking-[-0.01em] text-[#f5f4f2]/65 sm:max-w-[400px] md:text-[15px] lg:max-w-[440px] lg:text-[16px]">
-              Trusted by multinationals, MSMEs, and trade houses across India for
-              consistent quality, competitive pricing, and on-time dispatch.
+              Trusted by multinationals, MSMEs, and trade houses across India
+              for consistent quality, competitive pricing, and on-time
+              dispatch.
             </p>
             <a
-              href="#products"
+              href="#vision"
               className="hidden items-center gap-2 self-end font-mono text-[12px] tracking-[0.04em] text-[#f5f4f2]/65 transition hover:text-[#c6f19d] md:inline-flex"
             >
               <ScrollHint className="h-3 w-3 opacity-80" />

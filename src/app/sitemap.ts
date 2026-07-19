@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
-import { brand } from "@/lib/brand";
+import { brand, products } from "@/lib/brand";
+import { applicationsData } from "@/lib/applications";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = brand.url;
@@ -22,13 +23,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const productRoutes = products.map((p) => p.href);
+  const applicationRoutes = applicationsData.map(
+    (a) => `/applications/${a.slug}`
+  );
 
-  return [...staticRoutes, ...productRoutes].map((path) => ({
-    url: `${base}${path === "" ? "/" : path}`,
-    lastModified: now,
-    changeFrequency: path === "" ? "weekly" : "monthly",
-    priority: path === "" ? 1 : path.startsWith("/products/") ? 0.8 : 0.6,
-  }));
+  return [...staticRoutes, ...productRoutes, ...applicationRoutes].map(
+    (path) => ({
+      url: `${base}${path === "" ? "/" : path}`,
+      lastModified: now,
+      changeFrequency: path === "" ? ("weekly" as const) : ("monthly" as const),
+      priority:
+        path === ""
+          ? 1
+          : path.startsWith("/products/")
+            ? 0.8
+            : path.startsWith("/applications/")
+              ? 0.7
+              : 0.6,
+    })
+  );
 }
-
-import { products } from "@/lib/brand";

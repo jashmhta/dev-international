@@ -9,8 +9,8 @@ import { brand } from "@/lib/brand";
 const features = [
   {
     id: "01",
-    title: "Wide Chemical Portfolio",
-    body: "Oleo derivatives, fatty acids & alcohols, esters, glycerin, waxes, phosphorous compounds, solvent esters, and surfactants.",
+    title: "Bio-Based Chemical Portfolio",
+    body: "Plant-derived oleo derivatives, fatty acids & alcohols, esters, glycerin, waxes, phosphorous compounds, solvent esters, and surfactants — sourced from renewable feedstocks wherever possible.",
   },
   {
     id: "02",
@@ -32,6 +32,11 @@ const features = [
     title: "Competitive & Consistent",
     body: "Quality chemicals at correct competitive prices — for multinationals, medium & small units, and trade houses.",
   },
+  {
+    id: "06",
+    title: "Sustainable by Sourcing",
+    body: "RSPO Mass Balance certified grades, bio-based feedstocks from palm, coconut, and soya, and full COA/TDS traceability on every lot — so your green claims are verifiable.",
+  },
 ];
 
 export function ScrollNarrative() {
@@ -47,7 +52,7 @@ export function ScrollNarrative() {
           playsInline
           loop
           autoPlay
-          preload="auto"
+          preload="metadata"
         />
         <div className="absolute inset-0 bg-[#0f1f10]/20" />
         <div className="site-container relative z-10 flex h-full flex-col justify-center py-16">
@@ -84,8 +89,9 @@ export function ScrollNarrative() {
           </div>
           <div className="site-container relative z-10 flex h-full flex-col justify-end pb-16">
             <p className="max-w-md text-[1.1rem] font-medium leading-snug tracking-[-0.02em] text-white/90 md:text-[1.35rem]">
-              Nature-inspired specialty chemistry — delivered with industrial
-              discipline.
+            Eco-friendly chemistry, rooted in nature — bio-based feedstocks,
+            renewable plant oils, and traceable green supply chains, delivered
+            with industrial discipline.
             </p>
           </div>
         </div>
@@ -118,7 +124,7 @@ export function ScrollNarrative() {
                   onClick={() => setOpen(isOpen ? null : f.id)}
                   className="flex w-full items-start gap-4 py-5 text-left transition hover:bg-white/[0.02] md:gap-8 md:py-6"
                 >
-                  <span className="font-mono text-[12px] text-white/40">
+                  <span className="font-mono text-[12px] text-white/55">
                     {f.id}
                   </span>
                   <div className="flex-1">

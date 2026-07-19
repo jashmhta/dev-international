@@ -79,7 +79,7 @@ export function Vision() {
                   <br />
                   balance
                 </p>
-                <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.12em] text-white/40">
+                <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.12em] text-white/55">
                   Yearly
                 </p>
                 <p className="mt-3 font-geist text-[2.5rem] font-medium leading-none tracking-tight text-white">
@@ -101,7 +101,7 @@ export function Vision() {
                   </div>
                   <div className="absolute right-[4%] top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-white/50" />
                 </div>
-                <div className="mt-1 flex justify-between font-mono text-[9px] text-white/40">
+                <div className="mt-1 flex justify-between font-mono text-[9px] text-white/55">
                   <span>JAN</span>
                   <span>FEB</span>
                   <span>MAR</span>
@@ -109,7 +109,7 @@ export function Vision() {
                   <span className="text-alethia-lime">MAY</span>
                   <span>JUN</span>
                 </div>
-                <p className="mt-2 font-mono text-[10px] text-white/45">
+                <p className="mt-2 font-mono text-[10px] text-white/60">
                   1.9 tCO₂e
                 </p>
               </div>
@@ -127,7 +127,7 @@ export function Vision() {
                       <div className="flex items-start justify-between gap-2">
                         <div className="min-w-0">
                           <p className="font-mono text-[10px] uppercase leading-snug tracking-[0.06em] text-white/95">
-                            <span className="text-white/45">{f.id}.</span>{" "}
+                            <span className="text-white/60">{f.id}.</span>{" "}
                             {f.title}
                           </p>
                           {isOpen && (

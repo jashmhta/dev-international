@@ -6,10 +6,14 @@ import { brand } from "@/lib/brand";
 
 /** Lightweight preloader — no lottie SSR issues */
 export function Preloader() {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const t = setTimeout(() => setVisible(false), 1400);
+    // Show only once per session; starts hidden so it never blocks first paint/LCP
+    if (sessionStorage.getItem("dev-intl-preloaded")) return;
+    sessionStorage.setItem("dev-intl-preloaded", "1");
+    setVisible(true);
+    const t = setTimeout(() => setVisible(false), 900);
     return () => clearTimeout(t);
   }, []);
 
@@ -43,7 +47,7 @@ export function Preloader() {
             </motion.div>
           </motion.div>
           <motion.p
-            className="absolute bottom-16 font-mono text-[11px] uppercase tracking-[0.22em] text-white/40"
+            className="absolute bottom-16 font-mono text-[11px] uppercase tracking-[0.22em] text-white/55"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.25 }}

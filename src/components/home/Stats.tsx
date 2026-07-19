@@ -33,7 +33,7 @@ export function Stats() {
                 <p className="text-[2rem] font-medium leading-none tracking-[-0.03em] text-white sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem]">
                   <Counter end={s.value} suffix={s.suffix} />
                 </p>
-                <p className="text-[13px] leading-relaxed text-white/45 sm:text-sm">{s.sub}</p>
+                <p className="text-[13px] leading-relaxed text-white/60 sm:text-sm">{s.sub}</p>
               </div>
             </Reveal>
           ))}

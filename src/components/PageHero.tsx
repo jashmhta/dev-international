@@ -6,6 +6,7 @@ type Props = {
   subtitle?: React.ReactNode;
   dark?: boolean;
   showScroll?: boolean;
+  bgImage?: string;
   children?: React.ReactNode;
 };
 
@@ -15,19 +16,35 @@ export function PageHero({
   subtitle,
   dark = true,
   showScroll = false,
+  bgImage,
   children,
 }: Props) {
+  const isDark = bgImage ? true : dark;
   return (
     <section
-      className={`relative min-h-[70vh] pt-28 ${
-        dark ? "bg-alethia-dark text-alethia-cream" : "bg-alethia-cream text-alethia-dark"
+      className={`relative min-h-[70vh] overflow-hidden pt-28 ${
+        isDark ? "bg-alethia-dark text-alethia-cream" : "bg-alethia-cream text-alethia-dark"
       }`}
     >
-      <div className="site-container flex min-h-[calc(70vh-5rem)] flex-col justify-center pb-16 pt-10">
+      {bgImage && (
+        <div className="pointer-events-none absolute inset-0 select-none" aria-hidden>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={bgImage}
+            alt=""
+            fetchPriority="high"
+            decoding="async"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0f1f10]/95 via-[#0f1f10]/75 to-[#0f1f10]/40" />
+          <div className="absolute inset-x-0 bottom-0 h-[35%] bg-gradient-to-t from-[#0f1f10] to-transparent" />
+        </div>
+      )}
+      <div className="site-container relative z-10 flex min-h-[calc(70vh-5rem)] flex-col justify-center pb-16 pt-10">
         {eyebrow && (
           <p
             className={`eyebrow mb-6 ${
-              dark ? "text-alethia-lime" : "text-alethia-dark/50"
+              isDark ? "text-alethia-lime" : "text-alethia-dark/50"
             }`}
           >
             {eyebrow}
@@ -37,7 +54,7 @@ export function PageHero({
         {subtitle && (
           <div
             className={`body-lg mt-8 max-w-2xl ${
-              dark ? "text-white/70" : "text-alethia-dark/70"
+              isDark ? "text-white/70" : "text-alethia-dark/70"
             }`}
           >
             {subtitle}
@@ -48,7 +65,7 @@ export function PageHero({
           <a
             href="#content"
             className={`mt-16 inline-flex items-center gap-2 self-start font-mono text-[11px] uppercase tracking-[0.1em] ${
-              dark ? "text-white/55" : "text-alethia-dark/50"
+              isDark ? "text-white/55" : "text-alethia-dark/50"
             }`}
           >
             <ScrollHint className="h-4 w-4" />

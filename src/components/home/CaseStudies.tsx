@@ -11,7 +11,7 @@ const stories = [
     meta: "About the company",
     author: brand.founder.name,
     role: brand.founder.role,
-    image: "/images/brand/banner2.png",
+    image: "/images/brand/banner2.webp",
   },
   {
     href: "/applications",
@@ -20,7 +20,7 @@ const stories = [
     meta: "Application segments",
     author: brand.name,
     role: "Specialty Chemicals",
-    image: "/images/brand/banner3.png",
+    image: "/images/brand/banner3.webp",
   },
 ];
 

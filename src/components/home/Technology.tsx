@@ -13,7 +13,7 @@ export function Technology() {
       <div className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden bg-black py-20 text-center md:py-28">
         <div className="absolute inset-0">
           <Img
-            src="/images/brand/banner1.jpg"
+            src="/images/brand/banner1.webp"
             alt=""
             className="h-full w-full object-cover opacity-55"
           />

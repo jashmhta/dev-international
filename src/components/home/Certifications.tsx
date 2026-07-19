@@ -26,7 +26,7 @@ export function Certifications() {
               <span className="font-mono text-[12px] uppercase tracking-[0.1em] text-white/85">
                 {c.name}
               </span>
-              <span className="font-mono text-[11px] text-white/40">
+              <span className="font-mono text-[11px] text-white/55">
                 {c.desc}
               </span>
             </div>

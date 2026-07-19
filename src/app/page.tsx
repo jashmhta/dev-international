@@ -1,36 +1,38 @@
 import { Hero } from "@/components/home/Hero";
 import { ScrollNarrative } from "@/components/dynamics/ScrollNarrative";
-import { VisionOutro } from "@/components/home/VisionOutro";
-import { Stats } from "@/components/home/Stats";
+import { AboutSection } from "@/components/home/AboutSection";
+import { Testimonials } from "@/components/home/Testimonials";
 import { ProductShowcase } from "@/components/home/ProductShowcase";
+import { Stats } from "@/components/home/Stats";
 import { Solutions } from "@/components/home/Solutions";
 import { Manifesto } from "@/components/home/Manifesto";
-import { Technology } from "@/components/home/Technology";
 import { Process } from "@/components/home/Process";
-import { Testimonials } from "@/components/home/Testimonials";
 import { IndustriesGrid } from "@/components/home/IndustriesGrid";
 import { Certifications } from "@/components/home/Certifications";
 import { Trust } from "@/components/home/Trust";
-import { CaseStudies } from "@/components/home/CaseStudies";
 import { News } from "@/components/home/News";
 
 export default function HomePage() {
   return (
     <>
+      {/* 1. Hero — eco background image */}
       <Hero />
+      {/* 2. Rock 3D island — eco-friendly narrative */}
       <ScrollNarrative />
-      <VisionOutro />
-      <Stats />
+      {/* 3. About Us — founder + company years */}
+      <AboutSection />
+      {/* 4. Testimonials */}
+      <Testimonials />
+      {/* 5. Products — eco-friendly green */}
       <ProductShowcase />
+      {/* Supporting sections */}
+      <Stats />
       <Solutions />
       <Manifesto />
-      <Technology />
       <Process />
-      <Testimonials />
       <IndustriesGrid />
       <Certifications />
       <Trust />
-      <CaseStudies />
       <News />
     </>
   );

@@ -8,7 +8,7 @@ export function FooterCta() {
     <section className="relative overflow-hidden bg-alethia-dark">
       <div
         className="absolute inset-0 bg-cover bg-center opacity-45"
-        style={{ backgroundImage: "url(/images/cta-bg.jpeg)" }}
+        style={{ backgroundImage: "url(/images/cta-bg.webp)" }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-alethia-dark/70 via-alethia-dark/80 to-alethia-dark" />
       <div className="site-container relative z-10 flex min-h-[70vh] flex-col items-center justify-center py-28 text-center">
@@ -49,7 +49,7 @@ export function Footer() {
                 <p className="text-[1.5rem] font-medium leading-none tracking-[-0.02em] text-alethia-lime">
                   {s.v}
                 </p>
-                <p className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.12em] text-white/45">
+                <p className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.12em] text-white/60">
                   {s.l}
                 </p>
               </div>
@@ -62,6 +62,8 @@ export function Footer() {
             <img
               src={brand.logo}
               alt={brand.name}
+              width={362}
+              height={70}
               className="mb-4 h-9 w-auto brightness-0 invert"
             />
             <p className="text-sm leading-relaxed text-white/60">
@@ -69,11 +71,11 @@ export function Footer() {
             </p>
             <div className="mt-3 flex flex-col gap-1 font-mono text-[12px] text-white/55">
               {brand.phones.slice(0, 2).map((p) => (
-                <a key={p} href={`tel:${p.replace(/\s/g, "")}`} className="hover:text-alethia-lime">
+                <a key={p} href={`tel:${p.replace(/\s/g, "")}`} className="inline-block py-1 hover:text-alethia-lime">
                   {p}
                 </a>
               ))}
-              <a href={`mailto:${brand.email.sales}`} className="hover:text-alethia-lime">
+              <a href={`mailto:${brand.email.sales}`} className="inline-block py-1 hover:text-alethia-lime">
                 {brand.email.sales}
               </a>
             </div>
@@ -88,7 +90,7 @@ export function Footer() {
           <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {footer.columns.map((col) => (
               <div key={col.title}>
-                <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.12em] text-white/40">
+                <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.12em] text-white/55">
                   {col.title}
                 </p>
                 <ul className="space-y-2.5">
@@ -106,7 +108,7 @@ export function Footer() {
               </div>
             ))}
             <div>
-              <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.12em] text-white/40">
+              <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.12em] text-white/55">
                 connect
               </p>
               <ul className="space-y-2.5">
@@ -127,7 +129,7 @@ export function Footer() {
           </div>
 
           <div className="mt-16 flex flex-col gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
-            <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-white/40">
+            <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-white/55">
               © {new Date().getFullYear()} {brand.name} — All rights reserved
             </p>
             <a

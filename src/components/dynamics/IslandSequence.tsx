@@ -24,6 +24,7 @@ export function IslandSequence({
   const wrapRef = useRef<HTMLDivElement>(null);
   const images = useRef<(HTMLImageElement | null)[]>([]);
   const [ready, setReady] = useState(false);
+  const [nearViewport, setNearViewport] = useState(false);
   const frame = useRef(0);
 
   const paths = useMemo(
@@ -31,7 +32,25 @@ export function IslandSequence({
     []
   );
 
+  // Only begin downloading frames when the section is within 1.5 viewports
   useEffect(() => {
+    const wrap = wrapRef.current;
+    if (!wrap) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setNearViewport(true);
+          io.disconnect();
+        }
+      },
+      { rootMargin: "150% 0px" }
+    );
+    io.observe(wrap);
+    return () => io.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!nearViewport) return;
     let cancelled = false;
     const imgs: (HTMLImageElement | null)[] = new Array(FRAME_COUNT).fill(null);
     let loaded = 0;
@@ -60,7 +79,7 @@ export function IslandSequence({
     return () => {
       cancelled = true;
     };
-  }, [paths]);
+  }, [paths, nearViewport]);
 
   useEffect(() => {
     const canvas = canvasRef.current;

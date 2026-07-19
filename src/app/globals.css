@@ -360,3 +360,21 @@ a,
 button {
   -webkit-tap-highlight-color: transparent;
 }
+
+/* CSS-only hero title entrance — paints immediately (LCP-safe), no JS gating */
+@keyframes heroTitleIn {
+  from {
+    transform: translateY(28px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.hero-title-in {
+  animation: heroTitleIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-title-in {
+    animation: none;
+  }
+}

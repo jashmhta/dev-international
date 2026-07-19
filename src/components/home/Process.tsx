@@ -29,8 +29,8 @@ export function Process() {
             <div className="absolute left-[19px] top-3 bottom-3 w-px bg-alethia-dark/12 md:left-[23px]" />
             <ol className="flex flex-col gap-6 md:gap-8">
               {process.map((step, i) => (
-                <Reveal key={step.n} delay={0.06 * i}>
-                  <li className="relative flex gap-4 md:gap-6">
+                <Reveal key={step.n} delay={0.06 * i} as="li" className="relative flex gap-4 md:gap-6">
+                  <>
                     <span className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-alethia-dark/15 bg-white font-mono text-[11px] font-medium text-alethia-dark shadow-sm md:h-12 md:w-12 md:text-[12px]">
                       {step.n}
                     </span>
@@ -45,7 +45,7 @@ export function Process() {
                         {step.body}
                       </p>
                     </div>
-                  </li>
+                  </>
                 </Reveal>
               ))}
             </ol>

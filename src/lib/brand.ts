@@ -46,7 +46,7 @@ export const products: Product[] = [
     title: "Oleo Derivatives",
     short: "Oleo & specialty ingredients",
     href: "/products/oleo-derivatives",
-    image: "/images/brand/product-oleo.jpg",
+    image: "/images/brand/product-oleo.webp",
     blurb:
       "A comprehensive portfolio of oleo derivatives and specialty ingredients for cosmetics, personal care, and industrial formulations.",
     items: [
@@ -117,7 +117,7 @@ export const products: Product[] = [
     title: "Fatty Acids",
     short: "Industrial fatty acids",
     href: "/products/fatty-acids",
-    image: "/images/brand/product-fatty-acids.jpg",
+    image: "/images/brand/product-fatty-acids.webp",
     blurb:
       "High-quality fatty acids for soaps, detergents, rubber, plastics, cosmetics, and specialty chemical manufacturing.",
     items: [
@@ -149,7 +149,7 @@ export const products: Product[] = [
     title: "Oleic Acid",
     short: "Oleic acid grades",
     href: "/products/oleic-acid",
-    image: "/images/brand/product-fatty-acids.jpg",
+    image: "/images/brand/product-oleic-acid.webp",
     blurb:
       "Specialty oleic acid grades for cosmetics, lubricants, textiles, and chemical intermediates.",
     items: [
@@ -166,7 +166,7 @@ export const products: Product[] = [
     title: "Stearic Acid",
     short: "Stearic acid grades",
     href: "/products/stearic-acid",
-    image: "/images/brand/product-fatty-acids.jpg",
+    image: "/images/brand/product-stearic-acid.webp",
     blurb:
       "Stearic acid across cosmetic, polymer, rubber, and specialty grades — supplied for formulations demanding consistent purity.",
     items: [
@@ -182,7 +182,7 @@ export const products: Product[] = [
     title: "Fatty Alcohol",
     short: "Fatty alcohols range",
     href: "/products/fatty-alcohol",
-    image: "/images/brand/product-fatty-alcohol.jpg",
+    image: "/images/brand/product-fatty-alcohol.webp",
     blurb:
       "Fatty alcohols used as emollients, thickeners, and intermediates across personal care and industrial applications.",
     items: [
@@ -204,7 +204,7 @@ export const products: Product[] = [
     title: "Fatty Esters",
     short: "Esters for formulations",
     href: "/products/fatty-esters",
-    image: "/images/brand/product-esters.png",
+    image: "/images/brand/product-esters.webp",
     blurb:
       "A broad range of fatty esters for cosmetics, lubricants, plastics, and specialty formulations.",
     items: [
@@ -265,7 +265,7 @@ export const products: Product[] = [
     title: "Glycerin",
     short: "Refined glycerin grades",
     href: "/products/glycerin",
-    image: "/images/brand/product-glycerin.jpg",
+    image: "/images/brand/product-glycerin.webp",
     blurb:
       "Refined glycerin grades for pharmaceutical, food, cosmetic, and industrial use.",
     items: [
@@ -283,7 +283,7 @@ export const products: Product[] = [
     title: "All Type of Wax",
     short: "Industrial & cosmetic waxes",
     href: "/products/wax",
-    image: "/images/brand/product-wax.jpeg",
+    image: "/images/brand/product-wax.webp",
     blurb:
       "A full spectrum of natural and synthetic waxes for cosmetics, packaging, coatings, and industrial applications.",
     items: [
@@ -298,7 +298,7 @@ export const products: Product[] = [
     title: "Phosphorous Compounds",
     short: "Phosphorous chemistry",
     href: "/products/phosphorous",
-    image: "/images/brand/product-phosphorous.jpg",
+    image: "/images/brand/product-phosphorous.webp",
     blurb:
       "Phosphorous compounds and related chemistries for water treatment, metal pretreatment, and specialty applications.",
     items: [
@@ -314,7 +314,7 @@ export const products: Product[] = [
     title: "Amines, Phosphates & Sulphites",
     short: "Amines and inorganic phosphates",
     href: "/products/amines-phosphates-sulphites",
-    image: "/images/brand/product-phosphorous.jpg",
+    image: "/images/brand/product-amines.webp",
     blurb:
       "Amines, inorganic phosphates, and sulphites for water treatment, metal pretreatment, and specialty chemical processes.",
     items: [
@@ -339,7 +339,7 @@ export const products: Product[] = [
     title: "Solvent Esters",
     short: "Solvents & esters",
     href: "/products/solvent-esters",
-    image: "/images/brand/product-solvent.jpg",
+    image: "/images/brand/product-solvent.webp",
     blurb:
       "Solvent esters for paints, inks, coatings, adhesives, and industrial cleaning formulations.",
     items: [
@@ -364,7 +364,7 @@ export const products: Product[] = [
     title: "Surfactants",
     short: "Mild & specialty surfactants",
     href: "/products/surfactants",
-    image: "/images/brand/product-surfactants.jpg",
+    image: "/images/brand/product-surfactants.webp",
     blurb:
       "Alpha olefin sulphonates, sodium lauryl sulphates, and ether sulphates for detergents, shampoo, textile, and industrial cleaning.",
     items: [
@@ -389,7 +389,7 @@ export const products: Product[] = [
     title: "Various Mole Ethoxylates",
     short: "Ethoxylates of all categories",
     href: "/products/various-mole-ethoxylates",
-    image: "/images/brand/product-oleo.jpg",
+    image: "/images/brand/product-ethoxylates.webp",
     blurb:
       "PEG grades and ethoxylates of alcohols, phenols, acids, amines, and oils — across all mole ranges for industrial and formulation use.",
     items: [
@@ -421,7 +421,7 @@ export const products: Product[] = [
     title: "Vegetable Oil",
     short: "Natural & modified vegetable oils",
     href: "/products/vegetable-oil",
-    image: "/images/brand/product-oleo.jpg",
+    image: "/images/brand/product-vegetable-oil.webp",
     blurb:
       "Epoxidized, hydrogenated, and natural vegetable oils for plasticisers, lubricants, coatings, and specialty applications.",
     items: [
@@ -442,7 +442,7 @@ export const products: Product[] = [
     title: "More Products",
     short: "Additional specialty products",
     href: "/products/more-products",
-    image: "/images/brand/product-wax.jpeg",
+    image: "/images/brand/product-more.webp",
     blurb:
       "Soap noodles, casein, metallic soaps, essential oils, and additional specialty chemicals beyond our core portfolio.",
     items: [
@@ -496,38 +496,38 @@ export const applications = [
 ] as const;
 
 export const applicationImages: Record<string, string> = {
-  "Carbon Paper": "/images/application/Carbon_paper.jpg",
-  "Construction Chemical": "/images/application/Construction_chemical_.jpg",
+  "Carbon Paper": "/images/application/Carbon_paper.webp",
+  "Construction Chemical": "/images/application/Construction_chemical_.webp",
   "Cough Syrup": "/images/application/CoughSyrup.webp",
-  Food: "/images/application/Food.jpg",
+  Food: "/images/application/Food.webp",
   Varnish: "/images/application/varnisnew1.webp",
-  "Home Care Cleaning": "/images/application/Home_cxare_cleaning_.jpg",
-  "Plastic Industry": "/images/application/Plastic_Ind.jpg",
-  "Textile Industries": "/images/application/Textile_Industries.jpg",
-  Paper: "/images/application/Paper_.jpg",
-  "Water Treatment": "/images/application/Water_treatment_.jpg",
-  "Oil Field": "/images/application/oil_feild_.jpg",
-  "Ink / Printing Ink": "/images/application/PRINTING_INK.jpg",
-  Rubber: "/images/application/RUBBERnew.jpg",
-  Cosmetic: "/images/application/COSMETIC.jpg",
-  "Cutting Oil": "/images/application/CUTTING_OIL.jpg",
-  "Dyes & Intermediates": "/images/application/DYES_&_INTERMEDIATES.jpg",
-  "Foundry Chemical": "/images/application/FOUNDRY_CHEMICAL.jpg",
-  "Metal Treatment Chemical": "/images/application/METAL_TREATMENT_CHEMICAL1.jpg",
-  Ointment: "/images/application/OINTMENT3.jpg",
-  Paint: "/images/application/PAINT.jpg",
-  Pharmaceutical: "/images/application/PHARMACEUTICAL.jpg",
-  Resin: "/images/application/RESIN_2.jpg",
-  "Specialty Chemical": "/images/application/SPECIALITY_CHEMICAL_2.jpg",
-  "Wood and Laminates": "/images/application/WOOD.jpg",
-  "Adhesive & Glues": "/images/application/ADHESIVE_&_GLUES.jpg",
-  "Adhesive Tapes": "/images/application/ADHESIVE_TAPES3.jpg",
-  "Aluminium Foil": "/images/application/ALUMINIUM_FOIL2.jpg",
-  Cable: "/images/application/CABLE3.jpg",
+  "Home Care Cleaning": "/images/application/Home_cxare_cleaning_.webp",
+  "Plastic Industry": "/images/application/Plastic_Ind.webp",
+  "Textile Industries": "/images/application/Textile_Industries.webp",
+  Paper: "/images/application/Paper_.webp",
+  "Water Treatment": "/images/application/Water_treatment_.webp",
+  "Oil Field": "/images/application/oil_feild_.webp",
+  "Ink / Printing Ink": "/images/application/PRINTING_INK.webp",
+  Rubber: "/images/application/RUBBERnew.webp",
+  Cosmetic: "/images/application/COSMETIC.webp",
+  "Cutting Oil": "/images/application/CUTTING_OIL.webp",
+  "Dyes & Intermediates": "/images/application/DYES_&_INTERMEDIATES.webp",
+  "Foundry Chemical": "/images/application/FOUNDRY_CHEMICAL.webp",
+  "Metal Treatment Chemical": "/images/application/METAL_TREATMENT_CHEMICAL1.webp",
+  Ointment: "/images/application/OINTMENT3.webp",
+  Paint: "/images/application/PAINT.webp",
+  Pharmaceutical: "/images/application/PHARMACEUTICAL.webp",
+  Resin: "/images/application/RESIN_2.webp",
+  "Specialty Chemical": "/images/application/SPECIALITY_CHEMICAL_2.webp",
+  "Wood and Laminates": "/images/application/WOOD.webp",
+  "Adhesive & Glues": "/images/application/ADHESIVE_&_GLUES.webp",
+  "Adhesive Tapes": "/images/application/ADHESIVE_TAPES3.webp",
+  "Aluminium Foil": "/images/application/ALUMINIUM_FOIL2.webp",
+  Cable: "/images/application/CABLE3.webp",
   "Skin Care Products": "/images/application/scanproduct.webp",
   "Bathing Soap Products": "/images/application/Bathing_soap.webp",
-  "Metallic Stearate Products": "/images/application/metalic_sterate.jpg",
-  "Alkyd Resin Products": "/images/application/acrylated_alkyd_resin.jpg",
+  "Metallic Stearate Products": "/images/application/metalic_sterate.webp",
+  "Alkyd Resin Products": "/images/application/acrylated_alkyd_resin.webp",
 };
 
 export const industries = [

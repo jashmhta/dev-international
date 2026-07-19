@@ -17,7 +17,7 @@ export function ProductShowcase() {
               Fifteen product families. Scroll to explore them sideways.
             </h2>
           </div>
-          <p className="max-w-xs text-sm text-white/50">
+          <p className="max-w-xs text-sm text-white/70">
             From oleo derivatives to surfactants — a portfolio built to cover
             every link in your formulation chain.
           </p>
@@ -43,7 +43,7 @@ export function ProductShowcase() {
               </Link>
             </div>
             <div className="relative z-10">
-              <p className="font-mono text-[10px] uppercase tracking-[0.1em] text-white/45 sm:text-[11px]">
+              <p className="font-mono text-[10px] uppercase tracking-[0.1em] text-white/60 sm:text-[11px]">
                 {p.short}
               </p>
               <h3 className="mt-2 text-[1.4rem] font-medium leading-tight tracking-[-0.03em] text-white md:text-[1.75rem]">
@@ -56,13 +56,13 @@ export function ProductShowcase() {
                 {p.items.slice(0, 3).map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-white/12 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.08em] text-white/50"
+                    className="rounded-full border border-white/25 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.08em] text-white/70"
                   >
                     {item}
                   </span>
                 ))}
                 {p.items.length > 3 && (
-                  <span className="rounded-full border border-white/12 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.08em] text-white/35">
+                  <span className="rounded-full border border-white/25 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.08em] text-white/70">
                     +{p.items.length - 3}
                   </span>
                 )}

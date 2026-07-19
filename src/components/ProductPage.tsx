@@ -2,18 +2,26 @@ import Link from "next/link";
 import { PageHero } from "./PageHero";
 import { Button } from "./ui/Button";
 import { Img } from "./ui/Img";
+import { Reveal } from "./ui/Reveal";
 import type { Product } from "@/lib/brand";
 import { products, brand } from "@/lib/brand";
+import { getProductDetail } from "@/lib/productDetails";
+import { applicationsData } from "@/lib/applications";
 
 export function ProductPage({ product }: { product: Product }) {
+  const detail = getProductDetail(product.slug);
   const others = products.filter((p) => p.slug !== product.slug).slice(0, 4);
+  const relatedApps = detail
+    ? applicationsData.filter((a) => detail.applications.includes(a.slug))
+    : [];
 
   return (
     <>
       <PageHero
-        eyebrow="Products"
+        eyebrow={`Products · ${product.short}`}
         title={product.title}
         subtitle={product.blurb}
+        bgImage={product.image}
         showScroll
       >
         <div className="mt-10 flex flex-wrap gap-4">
@@ -24,58 +32,214 @@ export function ProductPage({ product }: { product: Product }) {
         </div>
       </PageHero>
 
-      <section id="content" className="section-light py-14 md:py-24">
-        <div className="site-container grid gap-10 md:gap-12 lg:grid-cols-2 lg:items-start">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-[20px] md:aspect-square md:rounded-[28px]">
-            <Img
-              src={product.image}
-              alt={product.title}
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </div>
-          <div>
-            <span className="label-pill">{product.short}</span>
-            <h2 className="display-md mt-4 text-alethia-dark md:mt-5">
-              {product.title} from {brand.name}
-            </h2>
-            <p className="mt-3 text-[1rem] leading-relaxed text-alethia-dark/70 md:mt-4 md:text-[1.05rem]">
-              {product.blurb} Enquire for grades, packaging, and bulk supply
-              from our Mumbai office and Bhiwandi warehouse.
-            </p>
-            <div className="mt-6 md:mt-8">
-              <h3 className="font-mono text-[11px] uppercase tracking-[0.1em] text-alethia-dark/45 md:text-[12px]">
-                Product range includes
-              </h3>
-              <ul className="mt-3 grid gap-2 sm:grid-cols-2 md:mt-4">
-                {product.items.map((item) => (
-                  <li
-                    key={item}
-                    className="rounded-xl border border-alethia-dark/10 bg-white px-3.5 py-2.5 text-[13px] text-alethia-dark/80 md:px-4 md:py-3 md:text-sm"
-                  >
-                    {item}
-                  </li>
+      {/* Overview / analysis */}
+      {detail && (
+        <section id="content" className="section-light py-14 md:py-24">
+          <div className="site-container grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
+            <div>
+              <Reveal>
+                <span className="label-pill">Overview</span>
+                <h2 className="display-md mt-4 text-alethia-dark">
+                  {product.title} — supply, grades &amp; analysis
+                </h2>
+              </Reveal>
+              <div className="mt-6 space-y-4">
+                {detail.overview.map((para, i) => (
+                  <Reveal key={i} delay={i * 0.06}>
+                    <p className="text-[1rem] leading-relaxed text-alethia-dark/70 md:text-[1.05rem]">
+                      {para}
+                    </p>
+                  </Reveal>
                 ))}
-              </ul>
+              </div>
             </div>
-            <div className="mt-10 flex flex-wrap gap-3">
-              <Button href="/contact" variant="filled">
-                Contact Sales
-              </Button>
-              <a
-                href={brand.whatsapp}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-alethia-dark/20 px-6 py-3 font-mono text-[12px] font-medium uppercase tracking-[0.08em] text-alethia-dark transition hover:border-alethia-dark/40"
+            <div className="space-y-6">
+              {detail.specs && (
+                <Reveal delay={0.1}>
+                  <div className="rounded-[24px] border border-alethia-dark/10 bg-white p-6 shadow-sm md:p-7">
+                    <h3 className="font-mono text-[11px] uppercase tracking-[0.1em] text-alethia-dark/45">
+                      At a glance
+                    </h3>
+                    <dl className="mt-4 divide-y divide-alethia-dark/8">
+                      {detail.specs.map((s) => (
+                        <div key={s.label} className="flex items-start justify-between gap-4 py-3">
+                          <dt className="text-[13px] text-alethia-dark/55">{s.label}</dt>
+                          <dd className="text-right text-[13px] font-medium text-alethia-dark">
+                            {s.value}
+                          </dd>
+                        </div>
+                      ))}
+                    </dl>
+                  </div>
+                </Reveal>
+              )}
+              <Reveal delay={0.15}>
+                <div className="overflow-hidden rounded-[24px]">
+                  <Img
+                    src={product.image}
+                    alt={`${product.title} — ${brand.name}`}
+                    className="aspect-[4/3] w-full object-cover"
+                  />
+                </div>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Product range */}
+      <section
+        id={detail ? undefined : "content"}
+        className="border-t border-alethia-dark/8 bg-[#f7f6f3] py-14 md:py-20"
+      >
+        <div className="site-container">
+          <Reveal>
+            <span className="label-pill">Product Range</span>
+            <h2 className="display-md mt-4 max-w-3xl text-alethia-dark">
+              {product.items.length}+ items available under {product.title.toLowerCase()}
+            </h2>
+            <p className="mt-3 max-w-xl text-[15px] text-alethia-dark/60">
+              Enquire for grades, packaging, and bulk supply from our Mumbai
+              office and Bhiwandi warehouse.
+            </p>
+          </Reveal>
+          <ul className="mt-8 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+            {product.items.map((item) => (
+              <li
+                key={item}
+                className="rounded-xl border border-alethia-dark/10 bg-white px-3.5 py-2.5 text-[13px] text-alethia-dark/80 transition hover:border-[#5c8a3f]/40 md:px-4 md:py-3 md:text-sm"
               >
-                WhatsApp
-              </a>
-            </div>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <div className="mt-10 flex flex-wrap gap-3">
+            <Button href="/contact" variant="filled">
+              Contact Sales
+            </Button>
+            <a
+              href={brand.whatsapp}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-alethia-dark/20 px-6 py-3 font-mono text-[12px] font-medium uppercase tracking-[0.08em] text-alethia-dark transition hover:border-alethia-dark/40"
+            >
+              WhatsApp
+            </a>
           </div>
         </div>
       </section>
 
-      {others.length > 0 && (
+      {/* Technical datasheets */}
+      {detail?.pdfs && detail.pdfs.length > 0 && (
+        <section className="section-light py-14 md:py-20">
+          <div className="site-container">
+            <Reveal>
+              <span className="label-pill">Documentation</span>
+              <h2 className="display-md mt-4 text-alethia-dark">
+                Technical datasheets
+              </h2>
+              <p className="mt-3 max-w-xl text-[15px] text-alethia-dark/60">
+                Download specifications for key grades. COA, MSDS, and
+                additional documents available on request.
+              </p>
+            </Reveal>
+            <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {detail.pdfs.map((pdf, i) => (
+                <Reveal key={pdf.file} delay={(i % 3) * 0.05}>
+                  <a
+                    href={encodeURI(pdf.file)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group flex items-center justify-between gap-4 rounded-2xl border border-alethia-dark/10 bg-white px-5 py-4 shadow-sm transition hover:-translate-y-0.5 hover:border-[#5c8a3f]/40 hover:shadow-md"
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-[#eef4e6] font-mono text-[10px] font-semibold text-[#5c8a3f]">
+                        PDF
+                      </span>
+                      <span className="text-[14px] font-medium text-alethia-dark">
+                        {pdf.name}
+                      </span>
+                    </div>
+                    <span className="font-mono text-[11px] uppercase tracking-wide text-alethia-dark/40 transition group-hover:text-[#5c8a3f]">
+                      ↓
+                    </span>
+                  </a>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Applications */}
+      {relatedApps.length > 0 && (
         <section className="section-dark py-14 md:py-20">
+          <div className="site-container">
+            <Reveal>
+              <span className="label-pill">Applications</span>
+              <h2 className="display-md mt-4 text-white">
+                Where {product.title.toLowerCase()} are used
+              </h2>
+            </Reveal>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+              {relatedApps.map((a, i) => (
+                <Reveal key={a.slug} delay={(i % 5) * 0.05}>
+                  <Link
+                    href={`/applications/${a.slug}`}
+                    className="group block overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition hover:border-[#c6f19d]/40"
+                  >
+                    <div className="relative aspect-[4/3]">
+                      <Img
+                        src={a.image}
+                        alt={a.title}
+                        className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <p className="text-sm font-medium text-white">{a.title}</p>
+                      <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.08em] text-[#c6f19d]/70">
+                        View →
+                      </p>
+                    </div>
+                  </Link>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Product FAQs */}
+      {detail?.faqs && detail.faqs.length > 0 && (
+        <section className="section-light py-14 md:py-20">
+          <div className="site-container max-w-4xl">
+            <Reveal>
+              <span className="label-pill">FAQ</span>
+              <h2 className="display-md mt-4 text-alethia-dark">
+                Common questions
+              </h2>
+            </Reveal>
+            <div className="mt-8 space-y-4">
+              {detail.faqs.map((f, i) => (
+                <Reveal key={i} delay={i * 0.06}>
+                  <details className="group rounded-2xl border border-alethia-dark/10 bg-white p-5 shadow-sm">
+                    <summary className="cursor-pointer list-none text-[15px] font-medium text-alethia-dark marker:content-none">
+                      {f.q}
+                    </summary>
+                    <p className="mt-3 text-[14px] leading-relaxed text-alethia-dark/65">
+                      {f.a}
+                    </p>
+                  </details>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Related products */}
+      {others.length > 0 && (
+        <section className="border-t border-white/5 bg-[#0c190d] py-14 md:py-20">
           <div className="site-container">
             <h2 className="display-md text-white">Related products</h2>
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

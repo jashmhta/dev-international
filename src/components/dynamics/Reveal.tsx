@@ -12,11 +12,13 @@ export function Reveal({
   className = "",
   delay = 0,
   y = 36,
+  as: Tag = "div",
 }: {
   children: React.ReactNode;
   className?: string;
   delay?: number;
   y?: number;
+  as?: "div" | "li" | "section" | "article" | "span";
 }) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -46,8 +48,12 @@ export function Reveal({
   }, [delay, y]);
 
   return (
-    <div ref={ref} className={className} style={{ willChange: "transform, opacity" }}>
+    <Tag
+      ref={ref as React.Ref<never>}
+      className={className}
+      style={{ willChange: "transform, opacity" }}
+    >
       {children}
-    </div>
+    </Tag>
   );
 }
